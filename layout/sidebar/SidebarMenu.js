@@ -7,14 +7,14 @@ import { SidebarMenuItem } from '../../data/sidebarMenu';
 const SidebarMenu = () => {
     const router = useRouter();
     const [activeMenu, setActiveMenu] = useState();
-    const [chiledMenu, setChiledMenu] = useState();
+    const [childMenu, setChildMenu] = useState();
 
     useEffect(() => {
         if (router.asPath) {
             SidebarMenuItem.forEach((item) => {
                 if (item.children) {
                     item.children.forEach((child) => {
-                        if (child.path === router.asPath) { setChiledMenu(child.title); setActiveMenu(item.title); return true }
+                        if (child.path === router.asPath) { setChildMenu(child.title); setActiveMenu(item.title); return true }
                         else return false;
                     })
                 } else {
@@ -49,7 +49,7 @@ const SidebarMenu = () => {
                                     {item.children.map((child, i) => {
                                         return (
                                             <li key={i}>
-                                                <Link href={`${child.path}`} className={`${child.title === chiledMenu ? 'active' : ''}`} onClick={() => { setChiledMenu(child.title) }}>
+                                                <Link href={`${child.path}`} className={`${child.title === childMenu ? 'active' : ''}`} onClick={() => { setChildMenu(child.title) }}>
                                                     <ChevronsRight />
                                                     {child.title}
                                                     {
@@ -66,7 +66,7 @@ const SidebarMenu = () => {
                     )
                 })
             }
-            <li>
+            {/* <li>
                 <div className="upgrade-box">
                     <img src="/assets/images/svg/1.svg" className="img-fluid" alt='' />
                     <h6>Need Help</h6>
@@ -77,7 +77,7 @@ const SidebarMenu = () => {
                         Buy Now
                     </Link>
                 </div>
-            </li>
+            </li> */}
         </ul>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Badge, Card, CardBody, CardHeader, Col, Container, Row, Table } from 'reactstrap'
-import Breadcrumb from '../../components/Common/Breadcrumb'
-import { DataTable } from '../../data/payments/tabledata'
+import Breadcrumb from '../components/Common/Breadcrumb'
+import { DataTable } from '../data/payments/tabledata'
 
 const Payments = () => {
     return (

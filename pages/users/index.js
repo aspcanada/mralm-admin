@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
 import Breadcrumb from '../../components/Common/Breadcrumb'
-import PropertyBoxFour from '../../components/Common/Propertybox/PropertyBoxOne';
+import UserBox from '../../components/manageuser/allusers/UserBox';
 import { getData } from '../../components/utils/getData';
 
 const AllUsers = () => {
@@ -15,7 +15,7 @@ const AllUsers = () => {
 
     return (
         <>
-            <Breadcrumb title='All Users' titleText='Welcome To Admin panel' parent='Manage users' />
+            <Breadcrumb title='All Users' titleText='Welcome To Admin panel' parent='Users' />
             <Container fluid={true}>
                 <Row className="agent-section property-section user-lists">
                     <Col lg='12'>
@@ -25,7 +25,7 @@ const AllUsers = () => {
                                     userlist && userlist.map((item, i) => {
                                         return (
                                             <Col md='12' xl='6' key={i}>
-                                                <PropertyBoxFour data={item} label={false} />
+                                                <UserBox data={item} label={false} />
                                             </Col>
                                         )
                                     })

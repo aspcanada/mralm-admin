@@ -11,7 +11,7 @@ const Notification = () => {
             <div className="notification-dropdown onhover-show-div">
                 <div className="dropdown-title">
                     <h6>Notifications</h6>
-                    <Link href='/myproperties/favourites'>Show all</Link>
+                    <Link href='/myproperties/propertylist'>Show all</Link>
                 </div>
                 <ul>
                     <li>

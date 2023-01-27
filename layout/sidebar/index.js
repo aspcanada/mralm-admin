@@ -4,7 +4,6 @@ import { ChevronsLeft } from "react-feather";
 import { Media } from "reactstrap";
 import SidebarMenu from "./SidebarMenu";
 import { useUser } from '@auth0/nextjs-auth0'
-import { withPageAuthRequired } from '@auth0/nextjs-auth0'
 
 const Sidebar = ({ toggle, setToggle }) => {
   const { user, error, isLoading } = useUser()
@@ -43,4 +42,3 @@ const Sidebar = ({ toggle, setToggle }) => {
 };
 
 export default Sidebar;
-// export default withPageAuthRequired(Sidebar);

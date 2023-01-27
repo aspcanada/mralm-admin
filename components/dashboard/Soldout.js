@@ -14,7 +14,7 @@ const Soldout = () => {
                 <CardHeader>
                     <div className="d-flex">
                         <h5>Sold out</h5>
-                        <Link href='/types/appartment' className="arrow-animated">
+                        <Link href='/myproperties/propertylist' className="arrow-animated">
                             See Details
                             <ChevronRight />
                         </Link>

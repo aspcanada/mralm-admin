@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Img from "../../utils/Img";
-import SocialAccounts from "../SocialAccounts";
+import SocialAccounts from "../../Common/SocialAccounts";
 
-const PropertyBoxFour = ({ data, label }) => {
+const UserBox = ({ data, label }) => {
     const [show, setShow] = useState();
     return (
         <>
@@ -24,11 +24,11 @@ const PropertyBoxFour = ({ data, label }) => {
                     <h3>
                         <Link href="/pages/agency/agency-profile">{data?.name}</Link>
                     </h3>
-                    <p className="font-roboto">Real estate Agent</p>
+                    <p className="font-roboto">{data.occupation}</p>
                     <ul className="agent-contact">
                         <li>
                             <i className="fas fa-phone-alt"></i>
-                            <span className="character">+91 {data?.mobile === show ? data?.mobile : data?.mobile.slice(0, 5) + "*****"}</span>
+                            <span className="character">{data?.mobile === show ? data?.mobile : data?.mobile.slice(0, 5) + "*****"}</span>
                             <span
                                 className="label label-light-danger"
                                 onClick={() => {
@@ -54,5 +54,5 @@ const PropertyBoxFour = ({ data, label }) => {
     );
 };
 
-export default PropertyBoxFour;
+export default UserBox;
 

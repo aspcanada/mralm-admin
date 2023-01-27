@@ -13,8 +13,8 @@ const PropertyBox = ({ data }) => {
     const currencyValue = 1
     const router = useRouter();
     const NavigateFavourit = () => {
-        toast.success('Add Favourites Successful..');
-        router.push('/myproperties/favourites')
+        toast.success('Added to favourites.');
+        // router.push('/myproperties/propertylist')
     }
 
     return (
@@ -30,7 +30,8 @@ const PropertyBox = ({ data }) => {
                         <span>{data.img.length || 5}</span>
                     </div>
                     <div className="overlay-property-box">
-                        <Link href='https://sheltos-react.vercel.app/pages/user-panel/compare-property' className="effect-round" title="Compare">
+                        {/* <Link href='https://sheltos-react.vercel.app/pages/user-panel/compare-property' className="effect-round" title="Compare"> */}
+                        <Link href='' className="effect-round" title="Compare">
                             <AddToCompareProducts id={data.id} />
                         </Link>
                         <div className="effect-round like" onClick={() => { NavigateFavourit() }} title="wishlist">
