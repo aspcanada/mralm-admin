@@ -1,3 +1,45 @@
+const { faker } = require('@faker-js/faker');
+
+function getImages() {
+    const images = [];
+    Array.from({ length: 3 }).forEach(() => {
+        images.push(faker.image.imageUrl(640, 480, "house", true));
+    });
+    return images;
+}
+
+function getProperties() {
+    const properties = [];
+    Array.from({ length: 10 }).forEach(() => {
+        properties.push(createRandomProperty());
+    });
+    return properties;
+}
+
+function createRandomProperty() {
+    return {
+        img: getImages(),
+        type: "rent",
+        propertyStatus: "For Sale",
+        label: ["sale"],
+        country: faker.address.cityName(),
+        title: "Little Acorn Farm",
+        price: faker.finance.amount(100000, 700000, 0),
+        details: "The most common and most absolute type of estate, the tenant enjoys the greatest discretion over the disposal of the property.",
+        home: "Virtual Home",
+        bed: faker.datatype.number(4),
+        bath: faker.datatype.number(3),
+        sqft: faker.datatype.number({ min: 1000, max: 4000}),
+        rooms: faker.datatype.number(4),
+        date: "August 4, 2022",
+        video: "/assets/video/video2.mp4",
+        id: faker.datatype.number(100),
+        propertyType: "Office",
+        agencies: "Lincoln",
+    }
+}
+
+
 export const propertyData = {
     LatestForSalePropertyData: [
         { title: "Neverland", propertyStatus: "For Sale", label: ["sale"], price: "13000", bed: 2, bath: 1, balcony: 1, area: 120, id: "1", img: "/assets/images/others/1.jpg", date: "Feb 6 2022" },
@@ -778,16 +820,10 @@ export const propertyData = {
             agencies: "Blue Sky",
         },
     ],
-    LatestPropertyListingInEnterprise: [
+    LatestPropertyListingInEnterprise: getProperties(),
+    LatestPropertyListingInEnterprise2: [
         {
-            img: [
-                "/assets/images/property/1.jpg",
-                "/assets/images/property/2.jpg",
-                "/assets/images/property/3.jpg",
-                "/assets/images/property/4.jpg",
-                "/assets/images/property/4.jpg",
-                "/assets/images/property/4.jpg",
-            ],
+            img: getImages(),
             type: "rent",
             propertyStatus: "For Sale",
             label: ["sale"],
@@ -808,14 +844,7 @@ export const propertyData = {
         },
 
         {
-            img: [
-                "/assets/images/property/4.jpg",
-                "/assets/images/property/3.jpg",
-                "/assets/images/property/2.jpg",
-                "/assets/images/property/4.jpg",
-                "/assets/images/property/1.jpg",
-                "/assets/images/property/4.jpg",
-            ],
+            img: getImages(),
             type: "rent",
             propertyStatus: "For Sale",
             label: ["sale"],

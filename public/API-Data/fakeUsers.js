@@ -10,13 +10,13 @@ function createRandomUser() {
   return {
     // id: faker.datatype.number(),
     img: faker.image.avatar(),
-    properties: `${faker.datatype.number()} properties`,
+    properties: "1",
     label: faker.datatype.boolean(),
     name: faker.name.fullName(),
     mobile: faker.phone.number(),
     mail: faker.internet.email(),
     pinCode: faker.address.zipCode(),
-    occupation: faker.name.jobTitle(),
+    occupation: faker.name.jobType(),
 
     // userId: faker.datatype.uuid(),
     // username: faker.internet.userName(),
