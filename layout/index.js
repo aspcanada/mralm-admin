@@ -4,9 +4,33 @@ import Customizer from "./customizer/Customizer";
 import Header from "./header";
 import Sidebar from "./sidebar";
 import TapToTop from "./TapToTop";
+import { useUser } from '@auth0/nextjs-auth0'
+import { useRouter } from "next/router";
+import { withPageAuthRequired } from '@auth0/nextjs-auth0'
 
 const Layout = ({ children }) => {
   const [toggle, setToggle] = useState();
+  const { user, error, isLoading } = useUser()
+
+  function useProtectedPage() {
+    const router = useRouter();
+    const { user, error, isLoading } = useUser()
+
+    useEffect(() => {
+      if (isLoading) return;
+      if (error) {
+        console.log(error);
+        return;
+      }
+      if (!user) {
+        router.push('/api/auth/login');
+        // router.push('/authentication/login');
+      }
+    }, [user, error, isLoading]);
+
+    return { user, error, isLoading };
+  }
+  useProtectedPage()
 
   const handleResize = () => {
     if (window.innerWidth > 991) {
@@ -37,4 +61,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default withPageAuthRequired(Layout);

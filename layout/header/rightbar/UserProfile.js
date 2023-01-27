@@ -1,12 +1,15 @@
 import Link from 'next/link'
 import React from 'react'
-import { FileText, LogIn, User } from 'react-feather'
+import { FileText, LogOut, User } from 'react-feather'
+import { useUser } from '@auth0/nextjs-auth0'
 
 const UserProfile = () => {
+    const { user, isLoading } = useUser()
+
     return (
         <li className="profile-avatar onhover-dropdown">
             <div>
-                <img src="/assets/images/avatar/3.jpg" className="img-fluid" alt='' />
+                <img src={user.picture} className="img-fluid" alt='' />
             </div>
             <ul className="profile-dropdown onhover-show-div">
                 <li>
@@ -21,11 +24,17 @@ const UserProfile = () => {
                         <FileText />
                     </Link>
                 </li>
-                <li>
-                    <Link href='/authentication/login'>
-                        <span>Log in</span>
+                {/* <li>
+                    <Link href='/api/auth/login'>
+                        <span>Login</span>
                         <LogIn />
                     </Link>
+                </li> */}
+                <li>
+                    <a href='/api/auth/logout'>
+                        <span>Logout</span>
+                        <LogOut />
+                    </a>
                 </li>
             </ul>
         </li>
