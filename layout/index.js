@@ -10,7 +10,7 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0'
 
 const Layout = ({ children }) => {
   const [toggle, setToggle] = useState();
-  const { user, error, isLoading } = useUser()
+  // const { user, error, isLoading } = useUser()
 
   function useProtectedPage() {
     const router = useRouter();

@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Input, Label, Row } from 'reactstrap'
 import Breadcrumb from '../../components/Common/Breadcrumb'
-import Listview from '../../components/myproperties/PropertyList/Listview'
+import Listview from '../../components/Deal/Listview'
 import { getData } from '../../components/utils/getData'
 import usePagination from '../../components/utils/usePagination'
 
-const Propertylist = () => {
+const DealList = () => {
 
   const [value, setValue] = useState();
   
   // get data from api
   useEffect(() => {
-      getData(`${process.env.API_URL}/property`)
+      getData(`${process.env.API_URL}/deals`)
           .then((res) => {
-              setValue(res.data?.LatestPropertyListingInEnterprise);
+              setValue(res.data);
           })
           .catch((error) => console.log('error', error))
   }, [])
@@ -23,7 +23,7 @@ const Propertylist = () => {
 
   return (
     <>
-      <Breadcrumb title='Property list' titleText='Welcome to admin panel' parent='My properties' />
+      <Breadcrumb title='Deals' titleText='Welcome to admin panel' parent='Deals' />
       <Container fluid={true}>
         <Row>
           <Col lg='12'>
@@ -57,4 +57,4 @@ const Propertylist = () => {
   )
 }
 
-export default Propertylist
+export default DealList

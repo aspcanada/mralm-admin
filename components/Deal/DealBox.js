@@ -2,13 +2,12 @@
 import Link from "next/link";
 import React from "react";
 import { Camera, Heart } from "react-feather";
-import ImageSlider from "../../ImageSlider";
-import AddToCompareProducts from "./AddToCompareProducts";
-import PropertyLabel from "./PropertyLabel";
+import ImageSlider from "../ImageSlider";
+import DealLabel from "./DealLabel";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 
-const PropertyBox = ({ data }) => {
+const DealBox = ({ data }) => {
     const symbol = '$';
     const currencyValue = 1
     const router = useRouter();
@@ -23,7 +22,7 @@ const PropertyBox = ({ data }) => {
                 <div className="property-image">
                     <ImageSlider images={data.img} />
                     <div className="labels-left">
-                        <PropertyLabel labels={data.label} />
+                        <DealLabel labels={data.label} />
                     </div>
                     <div className="seen-data">
                         <Camera />
@@ -76,4 +75,4 @@ const PropertyBox = ({ data }) => {
     );
 };
 
-export default PropertyBox;
+export default DealBox;

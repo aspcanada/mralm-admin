@@ -7,7 +7,7 @@ import { getData } from '../../components/utils/getData';
 const AllUsers = () => {
     const [userlist, setUserlist] = useState();
     useEffect(() => {
-        getData(`${process.env.API_URL}/userdata`)
+        getData(`${process.env.API_URL}/users`)
             .then((res) => {
                 setUserlist(res.data); console.log('res', res);
             }).catch((error) => console.log('Error', error));

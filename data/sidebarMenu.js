@@ -10,24 +10,26 @@ export const SidebarMenuItem = [
     {
         title: 'Deals',
         icon: <Grid />,
-        type: 'sub',
-        children: [
-            {
-                path: "/myproperties/add-property",
-                title: 'Add Propery',
-                type: 'link'
-            },
-            {
-                path: "/myproperties/edit-property",
-                title: 'Edit Propery',
-                type: 'link'
-            },
-            {
-                path: "/myproperties/propertylist",
-                title: 'Property List',
-                type: 'link'
-            }
-        ]
+        type: 'link',
+        path: "/deals",
+
+        // children: [
+        //     {
+        //         path: "/myproperties/add-property",
+        //         title: 'Add Propery',
+        //         type: 'link'
+        //     },
+        //     {
+        //         path: "/myproperties/edit-property",
+        //         title: 'Edit Propery',
+        //         type: 'link'
+        //     },
+        //     {
+        //         path: "/myproperties/propertylist",
+        //         title: 'Property List',
+        //         type: 'link'
+        //     }
+        // ]
     },
     {
         title: 'Users',

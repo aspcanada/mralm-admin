@@ -1,5 +1,4 @@
-// import { alluserData } from "../../public/API-Data/alluser";
-import { users } from "../../public/API-Data/fakeUsers";
+import { users } from "../../public/API-Data/users";
 
 export default function handler(req, res) {
     try {

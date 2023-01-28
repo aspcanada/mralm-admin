@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Row } from 'reactstrap'
-import PropertyBox from '../../Common/Propertybox/PropertyBox'
+import DealBox from './DealBox'
 
 const Listview = ({ Pagination, data }) => {
     return (
@@ -10,7 +10,7 @@ const Listview = ({ Pagination, data }) => {
                     data && data.map((item, i) => {
                         return (
                             <Col xl='4' md='6 xl-6' key={i}>
-                                <PropertyBox data={item} />
+                                <DealBox data={item} />
                             </Col>
                         )
                     })

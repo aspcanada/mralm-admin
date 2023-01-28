@@ -1,10 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
-import Img from "../utils/Img";
+import Img from "./utils/Img";
 
 const ImageSlider = ({ images }) => {
 
-    const propertySlider = {
+    const slider = {
         dots: true,
         infinite: true,
         speed: 500,
@@ -16,7 +16,7 @@ const ImageSlider = ({ images }) => {
 
 
     return (
-        <Slider className="property-slider" {...propertySlider}>
+        <Slider className="property-slider" {...slider}>
             {images?.map((data, i) => (
                 <div key={i}>
                     <div>
