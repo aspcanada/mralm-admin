@@ -24,6 +24,8 @@ const usePagination = (value, itemsPerPage=6) => {
 
     useEffect(() => {
         value && setData(value.slice(paginationData.ProductsPerPage * (activePage - 1), paginationData.ProductsPerPage * activePage))
+        setActivePage(activePage)
+        // console.log('activePage', activePage);
     }, [activePage, value])
 
     const Pagination = () => {

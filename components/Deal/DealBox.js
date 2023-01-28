@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import React from "react";
-import { Camera, Heart } from "react-feather";
+import { Calendar, Camera, Heart, Percent, PieChart } from "react-feather";
 import ImageSlider from "../ImageSlider";
 import DealLabel from "./DealLabel";
 import { useRouter } from "next/router";
@@ -16,6 +16,8 @@ const DealBox = ({ data }) => {
         // router.push('/myproperties/propertylist')
     }
 
+    const detailUrl = `/deals/${data.id}`
+
     return (
         <>
             <div className="property-box">
@@ -26,44 +28,50 @@ const DealBox = ({ data }) => {
                     </div>
                     <div className="seen-data">
                         <Camera />
-                        <span>{data.img.length || 5}</span>
+                        <span>{data.img.length}</span>
                     </div>
+                    <Link href='' title="Member">
+                        <img src={data.memberAvatar} alt="Member avatar" className="avatar"/>
+                    </Link>
                     <div className="overlay-property-box">
                         {/* <Link href='' className="effect-round" title="Compare">
                             <AddToCompareProducts id={data.id} />
                         </Link> */}
+                        
+                        
+
                         <div className="effect-round like" onClick={() => { NavigateFavourit() }} title="wishlist">
                             <Heart />
                         </div>
                     </div>
                 </div>
                 <div className="property-details">
-                    <span className="font-roboto">{data.country || "USA"} </span>
+                    <span className="font-roboto">{data.city || "USA"} </span>
                     <Link href={Array.isArray(data.img) ? `/property/image-slider/?id=${data.id}` : `/property/image-box/?id=${data.id}`}>
                         <h3>{data.title}</h3>
                     </Link>
                     <h6>
                         {symbol}
-                        {(data.price * currencyValue).toFixed(2) || (48596.0 * currencyValue).toFixed(2)}*
+                        {(data.amount).toLocaleString()}
                     </h6>
                     <p className="font-roboto">{data.details || "This home provides wonderful entertaining spaces with a chef kitchen opening. Elegant retreat in a quiet Coral Gables setting.."} </p>
                     <ul>
                         <li>
-                            <img src="/assets/images/svg/icon/double-bed.svg" className="img-fluid" alt="" />
-                            Bed : {data.bed || 5}
+                            <Calendar size={18} />&nbsp;
+                            Term: {data.term} months
                         </li>
                         <li>
-                            <img src="/assets/images/svg/icon/bathroom.svg" className="img-fluid" alt="" />
-                            Baths : {data.bath || 5}
+                            <Percent size={18} />&nbsp;
+                            Rate: {data.rate}%
                         </li>
                         <li>
-                            <img src="/assets/images/svg/icon/square-ruler-tool.svg" className="img-fluid ruler-tool" alt="" />
-                            Sq Ft : {data.sqft || 5}
+                            <PieChart size={18} />&nbsp;
+                            LTV: {data.ltv}%
                         </li>
                     </ul>
                     <div className="property-btn d-flex">
                         <span>{data.date}</span>
-                        <Link href='https://sheltos-react.vercel.app/property/image-box'>
+                        <Link href={detailUrl}>
                             <button type="button" className="btn btn-dashed btn-pill">
                                 Details
                             </button>

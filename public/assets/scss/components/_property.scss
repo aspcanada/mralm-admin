@@ -339,6 +339,17 @@
           color: $white;
         }
       }
+      .avatar {
+        width: 100px;
+        // height: 40px;
+        border-radius: 100%;
+        // overflow: hidden;
+        margin-left: 20px;
+        margin-top: -120px;
+        border: 2px solid $white;
+        position: absolute;
+        // background: white;
+      }
       .overlay-property-box {
         position: absolute;
         bottom: 12px;

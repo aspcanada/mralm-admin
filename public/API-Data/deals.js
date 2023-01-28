@@ -13,7 +13,7 @@ function getRandomLabel() {
 
 function getImages() {
   const images = [];
-  Array.from({ length: 3 }).forEach(() => {
+  Array.from({ length: (Math.random() * 3) + 2 }).forEach(() => {
       images.push(faker.image.imageUrl(640, 480, "house", true));
   });
   return images;
@@ -22,23 +22,28 @@ function getImages() {
 function createRandomDeal(idx) {
   return {
       img: getImages(),
-      type: "rent",
-      propertyStatus: "For Sale",
+      memberAvatar: faker.image.avatar(),
+      // type: "rent",
+      // propertyStatus: "For Sale",
       label: [getRandomLabel()],
-      country: faker.address.cityName(),
-      title: `Little Acorn Farm ${idx+1}`,
-      price: faker.finance.amount(100000, 700000, 0),
+      city: faker.address.cityName(),
+      title: `Little Acorn Farm ${idx}`,
       details: "The most common and most absolute type of estate, the tenant enjoys the greatest discretion over the disposal of the property.",
-      home: "Virtual Home",
-      bed: faker.datatype.number({ max: 5 }),
-      bath: faker.datatype.number({ max: 3 }),
-      sqft: faker.datatype.number({ min: 1000, max: 4000}),
-      rooms: faker.datatype.number(4),
+      amount: faker.datatype.number({ min: 100000, max: 300000 }),
+      // home: "Virtual Home",
+      term: faker.datatype.number({ min: 6, max: 24 }), //months
+      rate: faker.datatype.float({ min: 7, max: 13, precision: 0.1 }), //%
+      ltv: faker.datatype.number({ min: 70, max: 80}), //%
+      
+      // bed: faker.datatype.number({ min: 1, max: 5 }),
+      // bath: faker.datatype.number({ min: 1, max: 3 }),
+      // sqft: faker.datatype.number({ min: 1000, max: 4000}),
+      // rooms: faker.datatype.number(4),
       date: "August 4, 2022",
-      video: "/assets/video/video2.mp4",
+      // video: "/assets/video/video2.mp4",
       id: idx,
-      propertyType: "Office",
-      agencies: "Lincoln",
+      // propertyType: "Office",
+      // agencies: "Lincoln",
   }
 }
 

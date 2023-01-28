@@ -21,6 +21,10 @@ const DealList = () => {
   // use pagination hook
   const [Pagination, data, paginationData] = usePagination(value, 8);
 
+  // console.log(paginationData.GetEnd());
+  // console.log(paginationData.GetStart());
+  console.log(paginationData.ActivePage());
+
   return (
     <>
       <Breadcrumb title='Deals' titleText='Welcome to admin panel' parent='Deals' />
