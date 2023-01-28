@@ -10,20 +10,20 @@ function getImages() {
 
 function getLatestPropertyListingInEnterprise() {
     const properties = [];
-    Array.from({ length: 30 }).forEach(() => {
-        properties.push(createRandomProperty());
+    Array.from({ length: 30 }).forEach((_, idx) => {
+        properties.push(createRandomProperty(idx));
     });
     return properties;
 }
 
-function createRandomProperty() {
+function createRandomProperty(idx) {
     return {
         img: getImages(),
         type: "rent",
         propertyStatus: "For Sale",
         label: ["sale"],
         country: faker.address.cityName(),
-        title: "Little Acorn Farm",
+        title: `Little Acorn Farm ${idx+1}`,
         price: faker.finance.amount(100000, 700000, 0),
         details: "The most common and most absolute type of estate, the tenant enjoys the greatest discretion over the disposal of the property.",
         home: "Virtual Home",
@@ -33,7 +33,7 @@ function createRandomProperty() {
         rooms: faker.datatype.number(4),
         date: "August 4, 2022",
         video: "/assets/video/video2.mp4",
-        id: faker.datatype.number(100),
+        id: idx,
         propertyType: "Office",
         agencies: "Lincoln",
     }

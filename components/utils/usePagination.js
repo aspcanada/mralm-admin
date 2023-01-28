@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react'
 
-const usePagination = (value) => {
+const usePagination = (value, itemsPerPage=6) => {
     const [activePage, setActivePage] = useState(1);
     const [data, setData] = useState(value || []);
 
     const [paginationData, setPaginationData] = useState({
-        Totalpropducts: 0,
-        ProductsPerPage: 6,
-        TotalPages: function () { return Math.ceil(this.Totalpropducts / this.ProductsPerPage) },
-        TotalPagesArray: function () { return [...Array(this.TotalPages()).keys()] }
+        Totalproducts: 0,
+        ProductsPerPage: itemsPerPage,
+        TotalPages: function () { return Math.ceil(this.Totalproducts / this.ProductsPerPage) },
+        ActivePage: function () { return activePage },
+        TotalPagesArray: function () { return [...Array(this.TotalPages()).keys()] },
+        GetStart: function () { return this.ProductsPerPage * (activePage - 1) + 1 },
+        GetEnd: function () { return this.ProductsPerPage * activePage > this.Totalproducts ? this.Totalproducts : this.ProductsPerPage * activePage },
     });
     useEffect(() => {
         if (value) {
-            setPaginationData((pre) => ({ ...pre, Totalpropducts: value.length }))
+            setPaginationData((pre) => ({ ...pre, Totalproducts: value.length }))
         }
     }, [value])
 
@@ -45,7 +48,7 @@ const usePagination = (value) => {
             </nav>
         )
     }
-    return [Pagination, data]
+    return [Pagination, data, paginationData]
 }
 
 export default usePagination
