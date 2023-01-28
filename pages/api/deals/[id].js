@@ -1,12 +1,14 @@
-import { deals } from "../../../public/API-Data/deals";
-
-export default function handler(req, res) {
+export default async function handler(req, res) {
   
   const { id } = req.query;
+
+  const data = await fetch(`${process.env.API_URL}/deals`);
+  const deals = await data.json();
 
   try {
     res.status(200).json(deals[id]);
   } catch (err) {
-    alert("Data is not fetch!!! Please check console!!!");
+    console.log(err)
+    // alert("Data is not fetch!!! Please check console!!!");
   }
 }
