@@ -7,18 +7,24 @@ import usePagination from '../../components/utils/usePagination'
 
 const DealList = () => {
 
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
   
   // get data from api
   useEffect(() => {
     getData(`${process.env.API_URL}/deals`)
       .then((res) => {
-          setValue(res.data);
-          setIsLoading(false);
+        if (!res) {
+          throw new Error('Could not fetch data for that resource.');
+        }
+        setValue(res.data);
+        setIsLoading(false);
+        setError(null)
       })
       .catch((err) => {
-        console.log('err', err.message)
+        setIsLoading(false);
+        setError(err.message)
       })
   }, [])
 
@@ -33,6 +39,7 @@ const DealList = () => {
     <>
       <Breadcrumb title='Deals' titleText='Welcome to admin panel' parent='Deals' />
       {isLoading && <div>Loading...</div>}
+      {error && <div>{error}</div>}
       {value && 
         <Container fluid={true}>
           <Row>
