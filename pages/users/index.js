@@ -5,7 +5,7 @@ import UserBox from "../../components/manageuser/allusers/UserBox";
 import useSWR from "swr";
 
 const UsersList = () => {
-  const url = `${process.env.API_URL}/users`;
+  const url = "/api/users"
   const { data: users, isLoading, error } = useSWR(url);
 
   return (

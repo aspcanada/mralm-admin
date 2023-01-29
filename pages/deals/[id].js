@@ -11,7 +11,7 @@ const DealDetail = () => {
   const router = useRouter()
   const { id } = router.query
 
-  const url = `${process.env.API_URL}/deals/${id}`
+  const url = `/api/deals/${id}`
   const { data: deal, isLoading, error } = useSWR(url);
 
   return (

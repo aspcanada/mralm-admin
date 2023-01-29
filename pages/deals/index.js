@@ -6,7 +6,7 @@ import usePagination from '../../components/utils/usePagination'
 import useSWR from 'swr'
 
 const DealList = () => {
-  const url = `${process.env.API_URL}/deals`
+  const url = `/api/deals`
   const { data: deals, isLoading, error } = useSWR(url);
 
   // use pagination hook

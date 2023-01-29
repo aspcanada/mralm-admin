@@ -11,7 +11,7 @@ const withPWA = require("next-pwa")({
 module.exports = withPWA({
   reactStrictMode: false,
   env: {
-    API_URL: "http://localhost:4000/api",
+    // API_URL: "http://localhost:4000/api",
     // API_URL: "/api",
   },
 });
