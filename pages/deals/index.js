@@ -2,34 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { Col, Container, Input, Label, Row } from 'reactstrap'
 import Breadcrumb from '../../components/Common/Breadcrumb'
 import Listview from '../../components/Deal/Listview'
-import { getData } from '../../components/utils/getData'
 import usePagination from '../../components/utils/usePagination'
+import useSWR from 'swr'
 
 const DealList = () => {
-
-  const [value, setValue] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  
-  // get data from api
-  useEffect(() => {
-    getData(`${process.env.API_URL}/deals`)
-      .then((res) => {
-        if (!res) {
-          throw new Error('Could not fetch data for that resource.');
-        }
-        setValue(res.data);
-        setIsLoading(false);
-        setError(null)
-      })
-      .catch((err) => {
-        setIsLoading(false);
-        setError(err.message)
-      })
-  }, [])
+  // use custom fetch hook
+  const url = `${process.env.API_URL}/deals`
+  const { data: deals, isLoading, error } = useSWR(url);
 
   // use pagination hook
-  const [Pagination, data, paginationData] = usePagination(value, 8);
+  const [Pagination, data, paginationData] = usePagination(deals, 8);
 
   // console.log(paginationData.GetEnd());
   // console.log(paginationData.GetStart());
@@ -37,10 +19,10 @@ const DealList = () => {
 
   return (
     <>
-      <Breadcrumb title='Deals' titleText='Welcome to admin panel' parent='Deals' />
+      <Breadcrumb title='Deals' titleText='Our Newest Deals' parent='Deals' />
       {isLoading && <div>Loading...</div>}
       {error && <div>{error}</div>}
-      {value && 
+      {deals && 
         <Container fluid={true}>
           <Row>
             <Col lg='12'>
