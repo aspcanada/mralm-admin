@@ -4,6 +4,7 @@ import { Card, CardBody, CardHeader, Col, Container, Form, Row } from 'reactstra
 import EditPropertyForm from '../../components/myproperties/editProperty/EditPropertyForm'
 import { getData } from '../../components/utils/getData'
 import { useRouter } from "next/router"
+import DealForm from '../../components/Deal/DealForm'
 
 const DealDetail = () => {
   const router = useRouter()
@@ -11,15 +12,15 @@ const DealDetail = () => {
   const { id } = router.query
 
 
-  const [value, setValue] = useState();
+  const [deal, setDeal] = useState();
   
   // get data from api
   useEffect(() => {
-      getData(`${process.env.API_URL}/deals/${id}`)
-          .then((res) => {
-              setValue(res.data);
-          })
-          .catch((error) => console.log('error', error))
+    getData(`${process.env.API_URL}/deals/${id}`)
+      .then((res) => {
+        setDeal(res.data);
+      })
+      .catch((error) => console.log('error', error))
   }, [])
 
   return (
@@ -33,7 +34,8 @@ const DealDetail = () => {
                           <h5>View deal details</h5>
                       </CardHeader>
                       <CardBody className="card-body admin-form">
-                        <pre>{JSON.stringify(value, null, 2)}</pre>
+                        <pre>{JSON.stringify(deal, null, 2)}</pre>
+                          {deal && <DealForm deal={deal} />}
                           {/* <EditPropertyForm /> */}
                       </CardBody>
                   </Card>

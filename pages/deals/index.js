@@ -8,14 +8,18 @@ import usePagination from '../../components/utils/usePagination'
 const DealList = () => {
 
   const [value, setValue] = useState();
+  const [isLoading, setIsLoading] = useState(true);
   
   // get data from api
   useEffect(() => {
-      getData(`${process.env.API_URL}/deals`)
-          .then((res) => {
-              setValue(res.data);
-          })
-          .catch((error) => console.log('error', error))
+    getData(`${process.env.API_URL}/deals`)
+      .then((res) => {
+          setValue(res.data);
+          setIsLoading(false);
+      })
+      .catch((err) => {
+        console.log('err', err.message)
+      })
   }, [])
 
   // use pagination hook
@@ -28,35 +32,38 @@ const DealList = () => {
   return (
     <>
       <Breadcrumb title='Deals' titleText='Welcome to admin panel' parent='Deals' />
-      <Container fluid={true}>
-        <Row>
-          <Col lg='12'>
-            <div className='property-admin'>
-              <div className="property-section section-sm">
-                <Row className='ratio_55 property-grid-2 property-map map-with-back'>
-                  <Col className='col-12'>
-                    <div className="filter-panel">
-                      <div className="listing-option">
-                        <h5 className="mb-0">Showing <span>{paginationData.GetStart()}-{paginationData.GetEnd()} of {paginationData.Totalproducts}</span> Listings</h5>
-                        {/* <div>
-                          <div className="d-flex">
-                            <span className="m-r-10">Map view</span>
-                            <Label className="switch">
-                              <Input type="checkbox" className="option-list" name="step_1" defaultValue="ani1" defaultChecked /><span className="switch-state" />
-                            </Label>
-                            <span className="m-l-10">List view</span>
-                          </div>
-                        </div> */}
+      {isLoading && <div>Loading...</div>}
+      {value && 
+        <Container fluid={true}>
+          <Row>
+            <Col lg='12'>
+              <div className='property-admin'>
+                <div className="property-section section-sm">
+                  <Row className='ratio_55 property-grid-2 property-map map-with-back'>
+                    <Col className='col-12'>
+                      <div className="filter-panel">
+                        <div className="listing-option">
+                          <h5 className="mb-0">Showing <span>{paginationData.GetStart()}-{paginationData.GetEnd()} of {paginationData.Totalproducts}</span> Listings</h5>
+                          {/* <div>
+                            <div className="d-flex">
+                              <span className="m-r-10">Map view</span>
+                              <Label className="switch">
+                                <Input type="checkbox" className="option-list" name="step_1" defaultValue="ani1" defaultChecked /><span className="switch-state" />
+                              </Label>
+                              <span className="m-l-10">List view</span>
+                            </div>
+                          </div> */}
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                  <Listview Pagination={Pagination} data={data} />
-                </Row>
+                    </Col>
+                    <Listview Pagination={Pagination} data={data} />
+                  </Row>
+                </div>
               </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+            </Col>
+          </Row>
+        </Container>
+      }
     </>
   )
 }
