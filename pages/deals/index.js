@@ -14,35 +14,43 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
 const limit = 10;
 const getKey = (pageIndex, previousPageData) => {
   if (previousPageData && !previousPageData.length) return null // reached the end
-  return `/api/deals?_page=${pageIndex}&_limit=${limit}`           // SWR key
+  return `/api/deals?_page=${pageIndex+1}&_limit=${limit}`           // SWR key
+}
+
+const LoadMore = ({size, setSize, isLoadingMore, isReachingEnd}) => {
+  return (
+      <nav className="theme-pagination">
+          <ul className="pagination">
+              <li className="page-item">
+                  <button href="#" className="page-link" aria-label="Previous" disabled={isLoadingMore || isReachingEnd} onClick={() => setSize(size + 1)}>
+                      <span aria-hidden="true">
+                        {isLoadingMore ? "loading..." : isReachingEnd ? "No more deals" : "Load More"}
+                      </span>
+                  </button>
+              </li>
+          </ul>
+      </nav>
+  )
 }
 
 const DealList = () => {
-  // const { data: deals, isLoading, error } = useSWR("/api/deals");
+  const { data, error, isLoading, isValidating, size, setSize } = useSWRInfinite(getKey)
 
-  const { data, size, setSize } = useSWRInfinite(getKey)
-  if (!data) return 'loading'
-
-  console.log(data[0])
-
-  // We can now calculate the number of all data
-  let totalDeals = 0
-  for (let i = 0; i < data.length; i++) {
-    totalDeals += data[i].length
-  }
-
-  // use pagination hook
-  // const [Pagination, data, paginationData] = usePagination(data, 8);
-
-  // console.log(paginationData.GetEnd());
-  // console.log(paginationData.GetStart());
-  // console.log(paginationData.ActivePage());
+  const deals = data ? [].concat(...data) : [];
+  const isLoadingInitialData = !data && !error;
+  const isLoadingMore =
+    isLoadingInitialData ||
+    (size > 0 && data && typeof data[size - 1] === "undefined");
+  const isEmpty = data?.[0]?.length === 0;
+  const isReachingEnd =
+    isEmpty || (data && data[data.length - 1]?.length < limit);
+  const isRefreshing = isValidating && data && data.length === size;
 
   return (
     <>
       <Breadcrumb title='Deals' titleText='Our Newest Deals' parent='Deals' />
-      {/* {isLoading && <div>Loading...</div>}
-      {error && <div>{error}</div>} */}
+      {isLoading && <div>Loading...</div>}
+      {error && <div>{error}</div>}
       {data && 
         <Container fluid={true}>
           <Row>
@@ -53,7 +61,7 @@ const DealList = () => {
                     <Col className='col-12'>
                       <div className="filter-panel">
                         <div className="listing-option">
-                          <h5 className="mb-0">Showing <span>{totalDeals}</span> Deals</h5>
+                          <h5 className="mb-0">Showing <span>{size}</span> page(s) of <span>{isLoadingMore ? "..." : deals.length}</span> deals</h5>
                           {/* <h5 className="mb-0">Showing <span>{paginationData.GetStart()}-{paginationData.GetEnd()} of {paginationData.Totalproducts}</span> Listings</h5> */}
                           {/* <div>
                             <div className="d-flex">
@@ -67,8 +75,9 @@ const DealList = () => {
                         </div>
                       </div>
                     </Col>
+                    {isEmpty ? <p>no deals found.</p> : null}
                     <Listview data={data} size={size} setSize={setSize} />
-                    {/* <Listview Pagination={Pagination} data={data} /> */}
+                    <LoadMore size={size} setSize={setSize} isLoadingMore={isLoadingMore} isReachingEnd={isReachingEnd}/>
                   </Row>
                 </div>
               </div>

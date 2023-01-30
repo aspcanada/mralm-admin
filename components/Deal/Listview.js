@@ -2,19 +2,19 @@ import React, { useEffect, useState } from 'react'
 import { Col, Row } from 'reactstrap'
 import DealBox from './DealBox'
 
-const LoadMore = ({size, setSize}) => {
-    return (
-        <nav className="theme-pagination">
-            <ul className="pagination">
-                <li className="page-item">
-                    <button href="#" className="page-link" aria-label="Previous" onClick={() => setSize(size + 1)}>
-                        <span aria-hidden="true">Load More</span>
-                    </button>
-                </li>
-            </ul>
-        </nav>
-    )
-}
+// const LoadMore = ({size, setSize}) => {
+//     return (
+//         <nav className="theme-pagination">
+//             <ul className="pagination">
+//                 <li className="page-item">
+//                     <button href="#" className="page-link" aria-label="Previous" onClick={() => setSize(size + 1)}>
+//                         <span aria-hidden="true">Load More</span>
+//                     </button>
+//                 </li>
+//             </ul>
+//         </nav>
+//     )
+// }
 
 const Listview = ({ data, size, setSize }) => {
     return (
@@ -37,7 +37,7 @@ const Listview = ({ data, size, setSize }) => {
                 } */}
             </Row>
             {/* <button onClick={() => setSize(size + 1)}>Load More</button> */}
-            <LoadMore size={size} setSize={setSize}/>
+            {/* <LoadMore size={size} setSize={setSize}/> */}
             
         </div>
     )
