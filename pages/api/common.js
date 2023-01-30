@@ -1,6 +1,8 @@
+import { withApiAuthRequired } from '@auth0/nextjs-auth0'
+
 const apiDomain = "http://localhost:8081";
 
-export default async function commonHandler(req, res) {
+async function commonHandler(req, res) {
   const resp = await fetch(apiDomain + req.url); // includes query string
   const data = await resp.json();
 
@@ -11,3 +13,5 @@ export default async function commonHandler(req, res) {
     res.status(500).json({ statusCode: 500, message: err.message });
   }
 }
+
+export default withApiAuthRequired(commonHandler)
