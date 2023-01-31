@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
 import { FileText, LogOut, User } from 'react-feather'
 import { useUser } from '@auth0/nextjs-auth0'
@@ -9,7 +10,7 @@ const UserProfile = () => {
     return (
         <li className="profile-avatar onhover-dropdown">
             <div>
-                <img src={user.picture} className="img-fluid" alt='' />
+                <Image src={user.picture} className="img-fluid" alt='' height={40} width={40} />
             </div>
             <ul className="profile-dropdown onhover-show-div">
                 <li>

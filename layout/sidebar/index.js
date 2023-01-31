@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from 'next/image'
 import React from "react";
 import { ChevronsLeft } from "react-feather";
 import { Media } from "reactstrap";
@@ -23,7 +24,7 @@ const Sidebar = ({ toggle, setToggle }) => {
         <div className="user-profile">
           <Media className="media">
             <div className="change-pic">
-              <img src={user.picture} className="img-fluid" alt='' />
+              <Image src={user.picture} className="img-fluid" alt='' height={55} width={55} />
             </div>
             <Media body className="media-body">
               <Link href='/manage-users/profile'>

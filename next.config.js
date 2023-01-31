@@ -14,4 +14,14 @@ module.exports = withPWA({
     // API_URL: "http://localhost:4000/api",
     // API_URL: "/api",
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 's.gravatar.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
 });
