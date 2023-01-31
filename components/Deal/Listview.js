@@ -26,15 +26,6 @@ const Listview = ({ data, size, setSize }) => {
                                                 <DealBox data={deal} />
                                             </Col>)
                 })}
-                {/* {
-                    data && data.map((item, i) => {
-                        return (
-                            <Col xl='4' md='6 xl-6' key={i}>
-                                <DealBox data={item} />
-                            </Col>
-                        )
-                    })
-                } */}
             </Row>
             {/* <button onClick={() => setSize(size + 1)}>Load More</button> */}
             {/* <LoadMore size={size} setSize={setSize}/> */}

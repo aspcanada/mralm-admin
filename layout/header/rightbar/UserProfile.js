@@ -31,10 +31,10 @@ const UserProfile = () => {
                     </Link>
                 </li> */}
                 <li>
-                    <a href='/api/auth/logout'>
+                    <Link href='/api/auth/logout'>
                         <span>Logout</span>
                         <LogOut />
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </li>

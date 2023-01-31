@@ -22,7 +22,7 @@ const LoadMore = ({size, setSize, isLoadingMore, isReachingEnd}) => {
       <nav className="theme-pagination">
           <ul className="pagination">
               <li className="page-item">
-                  <button href="#" className="page-link" aria-label="Previous" disabled={isLoadingMore || isReachingEnd} onClick={() => setSize(size + 1)}>
+                  <button href="#" className="page-link" aria-label="Load More" disabled={isLoadingMore || isReachingEnd} onClick={() => setSize(size + 1)}>
                       <span aria-hidden="true">
                         {isLoadingMore ? "loading..." : isReachingEnd ? "No more deals" : "Load More"}
                       </span>

@@ -13,7 +13,7 @@ const Login = () => {
       console.log(error);
       return;
     }
-    if (!user) {
+    if (!(user || isLoading)) {
       router.push('/api/auth/login');
     } else {
       router.push('/dashboard');
@@ -21,8 +21,7 @@ const Login = () => {
   }, [user, error, isLoading]);
 
   // return (
-  //   <>
-  //   </>
+  //   <p>Redirecting...</p>
   // )
 };
 

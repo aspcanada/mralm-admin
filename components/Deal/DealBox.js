@@ -16,8 +16,6 @@ const DealBox = ({ data }) => {
         // router.push('/myproperties/propertylist')
     }
 
-    const detailUrl = `/deals/${data.id}`
-
     return (
         <>
             <div className="property-box">
@@ -71,7 +69,7 @@ const DealBox = ({ data }) => {
                     </ul>
                     <div className="property-btn d-flex">
                         <span>{data.date}</span>
-                        <Link href={detailUrl}>
+                        <Link href={`/deals/${data.id}`}>
                             <button type="button" className="btn btn-dashed btn-pill">
                                 Details
                             </button>
