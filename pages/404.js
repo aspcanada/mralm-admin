@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { Col, Container, Row } from 'reactstrap'
+import Image from 'next/image'
 
 const index = () => {
     return (
@@ -10,9 +11,9 @@ const index = () => {
                     <Row>
                         <Col lg='6' md='8' sm='10'>
                             <div className="not-found-img">
-                                <img src="/assets/images/svg/3.svg" className="img-fluid" alt='' />
+                                <Image src="/assets/images/svg/3.svg" className="img-fluid" alt='' width={750} height={750}/>
                                 <div className="animation-error">
-                                    <img src="/assets/images/svg/error.svg" className="img-fluid" alt='' />
+                                    <Image src="/assets/images/svg/error.svg" className="img-fluid" alt='' width={120} height={180}/>
                                 </div>
                             </div>
                         </Col>
