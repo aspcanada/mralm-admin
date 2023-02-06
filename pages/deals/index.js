@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { Col, Container, Input, Label, Row } from 'reactstrap'
+import { Col, Container, Row } from 'reactstrap'
 import Breadcrumb from '../../components/Common/Breadcrumb'
 import Listview from '../../components/Deal/Listview'
-import usePagination from '../../components/utils/usePagination'
-import useSWR from 'swr'
 import useSWRInfinite from 'swr/infinite'
-
-const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 // A function to get the SWR key of each page,
 // its return value will be accepted by `fetcher`.
