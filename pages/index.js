@@ -6,7 +6,7 @@ const Index = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/dashboard');
+    router.replace('/dashboard');
   }, [])
 
   return (

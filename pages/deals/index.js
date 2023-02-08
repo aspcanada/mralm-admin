@@ -31,6 +31,12 @@ const LoadMore = ({size, setSize, isLoadingMore, isReachingEnd}) => {
 const DealList = () => {
   const { data, error, isLoading, isValidating, size, setSize } = useSWRInfinite(getKey)
 
+  if (error) {
+    return (
+      <div>Failed to load data from API</div>
+    )
+  };
+
   const deals = data ? [].concat(...data) : [];
   const isLoadingInitialData = !data && !error;
   const isLoadingMore =
