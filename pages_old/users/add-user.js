@@ -1,7 +1,7 @@
-import React from 'react'
-import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap'
-import Breadcrumb from '../../components/Common/Breadcrumb'
-import AddUserForm from '../../components/manageuser/adduser/AddUserForm'
+import React from "react"
+import { Card, CardBody, CardHeader, Col, Container, Row } from "reactstrap"
+import Breadcrumb from "../../components/Common/Breadcrumb"
+import AddUserForm from "../../components/manageuser/adduser/AddUserForm"
 
 const AddUser = () => {
   return (

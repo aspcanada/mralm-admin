@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
-import { ChevronsRight } from 'react-feather'
-import { SidebarMenuItem } from '../../data/sidebarMenu'
+import Link from "next/link"
+import { useRouter } from "next/router"
+import React, { useEffect, useState } from "react"
+import { ChevronsRight } from "react-feather"
+import { SidebarMenuItem } from "../../data/sidebarMenu"
 
 const SidebarMenu = () => {
   const router = useRouter()
@@ -36,11 +36,11 @@ const SidebarMenu = () => {
         SidebarMenuItem.map((item, i) => {
           return (
             <li key={i} className="sidebar-item">
-              {item.type === 'link' && (
+              {item.type === "link" && (
                 <Link
                   href={`${item.path}`}
                   className={`sidebar-link only-link ${
-                    activeMenu === item.title ? 'active' : ''
+                    activeMenu === item.title ? "active" : ""
                   }`}
                   onClick={() => {
                     setActiveMenu((prev) => prev !== item.title && item.title)
@@ -50,11 +50,11 @@ const SidebarMenu = () => {
                   <span>{item.title}</span>
                 </Link>
               )}
-              {item.type === 'sub' && (
+              {item.type === "sub" && (
                 <a
                   href="#"
                   className={`sidebar-link ${
-                    activeMenu === item.title ? 'active' : ''
+                    activeMenu === item.title ? "active" : ""
                   }`}
                   onClick={() => {
                     setActiveMenu((prev) => prev !== item.title && item.title)
@@ -70,7 +70,7 @@ const SidebarMenu = () => {
               {Array.isArray(item.children) && (
                 <ul
                   className={`nav-submenu menu-content ${
-                    item.title === activeMenu ? 'd-block' : 'd-none'
+                    item.title === activeMenu ? "d-block" : "d-none"
                   }`}
                 >
                   {item.children.map((child, i) => {
@@ -79,7 +79,7 @@ const SidebarMenu = () => {
                         <Link
                           href={`${child.path}`}
                           className={`${
-                            child.title === childMenu ? 'active' : ''
+                            child.title === childMenu ? "active" : ""
                           }`}
                           onClick={() => {
                             setChildMenu(child.title)

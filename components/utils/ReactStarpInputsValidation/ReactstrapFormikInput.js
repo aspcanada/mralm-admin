@@ -1,5 +1,5 @@
-import React from 'react'
-import { FormFeedback, FormGroup, Input, Label } from 'reactstrap'
+import React from "react"
+import { FormFeedback, FormGroup, Input, Label } from "reactstrap"
 
 const ReactstrapFormikInput = ({
   field: { ...fields },
@@ -7,11 +7,11 @@ const ReactstrapFormikInput = ({
   ...props
 }) => {
   const InputsProps = { ...props }
-  delete InputsProps['label']
+  delete InputsProps["label"]
   return (
     <FormGroup>
       {props.label && (
-        <Label for={props.id} className={'label-color'}>
+        <Label for={props.id} className={"label-color"}>
           {props.label}
         </Label>
       )}
@@ -23,7 +23,7 @@ const ReactstrapFormikInput = ({
       {touched[fields.name] && errors[fields.name] ? (
         <FormFeedback>{errors[fields.name]}</FormFeedback>
       ) : (
-        ''
+        ""
       )}
     </FormGroup>
   )

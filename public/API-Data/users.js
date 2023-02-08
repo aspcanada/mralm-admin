@@ -1,4 +1,4 @@
-const { faker } = require('@faker-js/faker')
+const { faker } = require("@faker-js/faker")
 
 const users = []
 
@@ -10,7 +10,7 @@ function createRandomUser() {
   return {
     // id: faker.datatype.number(),
     img: faker.image.avatar(),
-    properties: '1',
+    properties: "1",
     label: faker.datatype.boolean(),
     name: faker.name.fullName(),
     mobile: faker.phone.number(),

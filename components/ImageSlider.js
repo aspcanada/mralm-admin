@@ -1,6 +1,6 @@
-import React from 'react'
-import Slider from 'react-slick'
-import Img from './utils/Img'
+import React from "react"
+import Slider from "react-slick"
+import Img from "./utils/Img"
 
 const ImageSlider = ({ images }) => {
   const slider = {

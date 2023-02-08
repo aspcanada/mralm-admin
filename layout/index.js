@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import Footer from '../components/Common/Footer'
-import Customizer from './customizer/Customizer'
-import Header from './header'
-import Sidebar from './sidebar'
-import TapToTop from './TapToTop'
-import { useUser } from '@auth0/nextjs-auth0'
-import { useRouter } from 'next/router'
-import { withPageAuthRequired } from '@auth0/nextjs-auth0'
+import React, { useEffect, useState } from "react"
+import Footer from "../components/Common/Footer"
+import Customizer from "./customizer/Customizer"
+import Header from "./header"
+import Sidebar from "./sidebar"
+import TapToTop from "./TapToTop"
+import { useUser } from "@auth0/nextjs-auth0"
+import { useRouter } from "next/router"
+import { withPageAuthRequired } from "@auth0/nextjs-auth0"
 
 const Layout = ({ children }) => {
   const [toggle, setToggle] = useState()
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
         return
       }
       if (!user) {
-        router.push('/api/auth/login')
+        router.push("/api/auth/login")
         // router.push('/authentication/login');
       }
     }, [user, error, isLoading])
@@ -41,8 +41,8 @@ const Layout = ({ children }) => {
   }
   useEffect(() => {
     setToggle(window.innerWidth > 991)
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   }, [])
 
   return (

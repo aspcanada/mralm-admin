@@ -1,7 +1,7 @@
-import React from 'react'
-import { MoreHorizontal } from 'react-feather'
-import { Card, CardBody, CardHeader, Col, Media, Table } from 'reactstrap'
-import { propertySaledata } from '../../data/Report/data'
+import React from "react"
+import { MoreHorizontal } from "react-feather"
+import { Card, CardBody, CardHeader, Col, Media, Table } from "reactstrap"
+import { propertySaledata } from "../../data/Report/data"
 
 const PropertySale = () => {
   return (

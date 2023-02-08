@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import React from 'react'
-import { Mail } from 'react-feather'
-import { Media } from 'reactstrap'
+import Link from "next/link"
+import React from "react"
+import { Mail } from "react-feather"
+import { Media } from "reactstrap"
 
 const Mailbox = () => {
   return (

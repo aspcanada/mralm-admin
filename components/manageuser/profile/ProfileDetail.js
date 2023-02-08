@@ -1,11 +1,11 @@
-import Link from 'next/link'
-import React from 'react'
-import { ChevronRight } from 'react-feather'
-import { Button, Card, CardBody, Col, Media } from 'reactstrap'
+import Link from "next/link"
+import React from "react"
+import { ChevronRight } from "react-feather"
+import { Button, Card, CardBody, Col, Media } from "reactstrap"
 import {
   Monthlydata,
   Projectimg,
-} from '../../../data/manage-profile/profiledata'
+} from "../../../data/manage-profile/profiledata"
 
 const ProfileDetail = () => {
   return (
@@ -22,7 +22,7 @@ const ProfileDetail = () => {
               <Media body>
                 <h4>Good Evening , Brock Lee</h4>
                 <span className="light-font">
-                  My current address{' '}
+                  My current address{" "}
                   <a>Mina Road, Dubai, United Arab Emirates</a>
                 </span>
                 <ul className="agent-social mt-2">
@@ -110,7 +110,7 @@ const ProfileDetail = () => {
                   {Monthlydata &&
                     Monthlydata.map((item, i) => {
                       return (
-                        <li key={i} className={item.class ? item.class : ''}>
+                        <li key={i} className={item.class ? item.class : ""}>
                           <div>
                             <i className="fas fa-check-circle" />
                             <span>{item.time}</span>

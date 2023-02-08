@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { FormFeedback, FormGroup, Input, Label } from 'reactstrap'
+import * as React from "react"
+import { FormFeedback, FormGroup, Input, Label } from "reactstrap"
 
 /*let handleBlur = event => {
     if (this.ignoreNextBlur === true) {
@@ -20,11 +20,11 @@ const ReactstrapSelectInput = ({
   let error = errors[field.name]
   let touch = touched[field.name]
   const InputsProps = { ...props }
-  delete InputsProps['inputprops']
-  delete InputsProps['label']
+  delete InputsProps["inputprops"]
+  delete InputsProps["label"]
   return (
     <FormGroup>
-      <Label for={props.inputprops.id} className={'label-color'}>
+      <Label for={props.inputprops.id} className={"label-color"}>
         {props.label}
       </Label>
       <Input

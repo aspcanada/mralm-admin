@@ -1,6 +1,6 @@
-import { useRouter } from 'next/router'
-import React, { useEffect } from 'react'
-import { useUser } from '@auth0/nextjs-auth0'
+import { useRouter } from "next/router"
+import React, { useEffect } from "react"
+import { useUser } from "@auth0/nextjs-auth0"
 
 const Login = () => {
   const router = useRouter()
@@ -13,9 +13,9 @@ const Login = () => {
       return
     }
     if (!(user || isLoading)) {
-      router.push('/api/auth/login')
+      router.push("/api/auth/login")
     } else {
-      router.push('/dashboard')
+      router.push("/dashboard")
     }
   }, [user, error, isLoading])
 

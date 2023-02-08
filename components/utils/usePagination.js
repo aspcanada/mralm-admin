@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react"
 
 const usePagination = (value, itemsPerPage = 6) => {
   const [activePage, setActivePage] = useState(1)
@@ -56,7 +56,7 @@ const usePagination = (value, itemsPerPage = 6) => {
               className="page-link"
               aria-label="Previous"
               onClick={() => {
-                activePage > 1 ? setActivePage((p) => p - 1) : ''
+                activePage > 1 ? setActivePage((p) => p - 1) : ""
               }}
             >
               <span aria-hidden="true">«</span>
@@ -69,7 +69,7 @@ const usePagination = (value, itemsPerPage = 6) => {
             .map((item) => (
               <li
                 className={`page-item${
-                  item + 1 === activePage ? ' active' : ''
+                  item + 1 === activePage ? " active" : ""
                 }`}
                 key={item}
                 onClick={() => setActivePage(item + 1)}
@@ -88,7 +88,7 @@ const usePagination = (value, itemsPerPage = 6) => {
               onClick={() => {
                 activePage < paginationData.TotalPages()
                   ? setActivePage((p) => p + 1)
-                  : ''
+                  : ""
               }}
             >
               <span aria-hidden="true">»</span>

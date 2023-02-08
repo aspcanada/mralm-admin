@@ -1,6 +1,6 @@
-import React from 'react'
-import { Card, CardBody, Col, Media, Row } from 'reactstrap'
-import { FollowingData } from '../../../data/manage-profile/profiledata'
+import React from "react"
+import { Card, CardBody, Col, Media, Row } from "reactstrap"
+import { FollowingData } from "../../../data/manage-profile/profiledata"
 
 const Following = () => {
   return (

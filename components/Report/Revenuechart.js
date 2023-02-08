@@ -1,9 +1,9 @@
-import dynamic from 'next/dynamic'
-import React from 'react'
-import { Card, CardBody, CardHeader, Col } from 'reactstrap'
-import { RevenueOptions, RevenueSeries } from '../../data/Report/data'
+import dynamic from "next/dynamic"
+import React from "react"
+import { Card, CardBody, CardHeader, Col } from "reactstrap"
+import { RevenueOptions, RevenueSeries } from "../../data/Report/data"
 
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false })
 
 const Revenuechart = () => {
   return (

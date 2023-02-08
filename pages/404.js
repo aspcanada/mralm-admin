@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import React from 'react'
-import { Col, Container, Row } from 'reactstrap'
-import Image from 'next/image'
+import Link from "next/link"
+import React from "react"
+import { Col, Container, Row } from "reactstrap"
+import Image from "next/image"
 
 const index = () => {
   return (

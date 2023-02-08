@@ -1,32 +1,32 @@
-import { Field, Form, Formik } from 'formik'
-import React from 'react'
-import * as Yup from 'yup'
-import { Button, Col, Row } from 'reactstrap'
-import { ReactstrapInput } from '../../utils/ReactStarpInputsValidation'
+import { Field, Form, Formik } from "formik"
+import React from "react"
+import * as Yup from "yup"
+import { Button, Col, Row } from "reactstrap"
+import { ReactstrapInput } from "../../utils/ReactStarpInputsValidation"
 
 const WizardForm2 = ({ setSteps, setData, data }) => {
   return (
     <Formik
       initialValues={{
-        email: data.email || '',
-        password: data.password || '',
-        confirmPW: data.confirmPW || '',
-        description: data.description || '',
-        address: data.address || '',
-        zip: data.zip || '',
+        email: data.email || "",
+        password: data.password || "",
+        confirmPW: data.confirmPW || "",
+        description: data.description || "",
+        address: data.address || "",
+        zip: data.zip || "",
       }}
       validationSchema={Yup.object().shape({
         email: Yup.string().required(),
         password: Yup.string().required(),
         confirmPW: Yup.string()
-          .when('password', {
+          .when("password", {
             is: (val) => (val && val.length > 0 ? true : false),
             then: Yup.string().oneOf(
-              [Yup.ref('password')],
-              'Both password need to be the same'
+              [Yup.ref("password")],
+              "Both password need to be the same"
             ),
           })
-          .required('Required'),
+          .required("Required"),
         description: Yup.string().required(),
         address: Yup.string().required(),
         zip: Yup.string().min(5).max(6).required(),

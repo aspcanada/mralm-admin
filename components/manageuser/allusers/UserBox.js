@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import React, { useState } from 'react'
-import Img from '../../utils/Img'
-import SocialAccounts from '../../Common/SocialAccounts'
+import Link from "next/link"
+import React, { useState } from "react"
+import Img from "../../utils/Img"
+import SocialAccounts from "../../Common/SocialAccounts"
 
 const UserBox = ({ data, label }) => {
   const [show, setShow] = useState()
@@ -36,7 +36,7 @@ const UserBox = ({ data, label }) => {
               <span className="character">
                 {data?.mobile === show
                   ? data?.mobile
-                  : data?.mobile.slice(0, 5) + '*****'}
+                  : data?.mobile.slice(0, 5) + "*****"}
               </span>
               <span
                 className="label label-light-danger"
@@ -45,7 +45,7 @@ const UserBox = ({ data, label }) => {
                   data?.mobile === show && setShow()
                 }}
               >
-                {show === data?.mobile ? 'show' : 'hide'}
+                {show === data?.mobile ? "show" : "hide"}
               </span>
             </li>
             <li>

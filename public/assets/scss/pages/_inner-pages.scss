@@ -195,7 +195,7 @@
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       top: 0;
       left: 0;
       width: 100%;
@@ -239,7 +239,7 @@
         line-height: 1.8;
         &::after {
           position: absolute;
-          content: '';
+          content: "";
           width: 180px;
           height: 100%;
           right: -54px;
@@ -317,7 +317,7 @@
 
         &::before,
         &::after {
-          content: '';
+          content: "";
           position: absolute;
         }
 
@@ -361,7 +361,7 @@
 
           &::after {
             position: absolute;
-            content: '';
+            content: "";
             width: 91px;
             left: 35px;
             height: 100%;
@@ -507,7 +507,7 @@
     position: relative;
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       width: 0;
       height: 3px;
       background-color: var(--theme-default);
@@ -537,7 +537,7 @@
 
         &::after {
           position: absolute;
-          content: '';
+          content: "";
           width: 40px;
           height: 40px;
           border-radius: 100%;
@@ -737,7 +737,7 @@
   .agent-grids {
     .property-wrapper-grid {
       .property-grid {
-        > [class*='col-xl-3'] {
+        > [class*="col-xl-3"] {
           .label {
             left: 8px;
           }
@@ -1148,7 +1148,7 @@
           border-left: 7px solid transparent;
           border-right: 7px solid transparent;
           border-top: 7px solid var(--theme-default);
-          content: '';
+          content: "";
           bottom: -7px;
           opacity: 0;
           -webkit-transition: 0.5s;
@@ -1380,7 +1380,7 @@
 
         &:after {
           position: absolute;
-          content: '';
+          content: "";
           width: 100%;
           height: 0;
           transition: height 0.5s;
@@ -1516,7 +1516,7 @@
         transition: 0.5s ease;
       }
 
-      &[aria-expanded='true'] {
+      &[aria-expanded="true"] {
         &::after {
           transform: rotate(90deg);
           transition: 0.5s ease;
@@ -1864,7 +1864,7 @@
         &::before,
         &::after {
           position: absolute;
-          content: '';
+          content: "";
           background-color: $white;
           width: 16px;
           height: 1px;
@@ -2479,7 +2479,7 @@
 
           &::before {
             position: absolute;
-            content: '';
+            content: "";
             width: 30px;
             height: 2px;
             background-color: var(--theme-default);
@@ -2826,7 +2826,7 @@
   }
   .property-wrapper-grid {
     .property-grid {
-      > [class*='col-lg-4'],
+      > [class*="col-lg-4"],
       > .col-xl-4 {
         .property-box {
           .property-details {
@@ -2844,7 +2844,7 @@
           }
         }
       }
-      > [class*='col-xl-3'],
+      > [class*="col-xl-3"],
       > .col-xl-3 {
         .property-box {
           .property-details {
@@ -2989,7 +2989,7 @@
 
         &::before {
           position: absolute;
-          content: '';
+          content: "";
           width: 30px;
           height: 2px;
           background-color: var(--theme-default);
@@ -3174,7 +3174,7 @@
   }
 }
 .gj-datepicker-bootstrap {
-  [role='right-icon'] {
+  [role="right-icon"] {
     button {
       border-color: $light-border;
     }
@@ -3187,7 +3187,7 @@
   }
 }
 
-input[type='date'] {
+input[type="date"] {
   text-transform: inherit;
 }
 
@@ -3237,7 +3237,7 @@ input[type='date'] {
 }
 
 .gj-picker {
-  div[role='navigator'] div[role='period'] {
+  div[role="navigator"] div[role="period"] {
     font-family: $font_1, $font_3;
   }
 }
@@ -3458,7 +3458,7 @@ input[type='date'] {
 
     &:before {
       position: absolute;
-      content: '';
+      content: "";
       height: 26px;
       width: 26px;
       left: 4px;

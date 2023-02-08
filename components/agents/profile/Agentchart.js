@@ -1,14 +1,14 @@
-import dynamic from 'next/dynamic'
-import Link from 'next/link'
-import React from 'react'
-import { Card, CardBody, Col, Row } from 'reactstrap'
+import dynamic from "next/dynamic"
+import Link from "next/link"
+import React from "react"
+import { Card, CardBody, Col, Row } from "reactstrap"
 import {
   Monthlydata,
   Useroptions,
   userseries,
-} from '../../../data/manage-profile/profiledata'
+} from "../../../data/manage-profile/profiledata"
 
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false })
 
 const Agentchart = () => {
   return (
@@ -43,7 +43,7 @@ const Agentchart = () => {
                   {Monthlydata &&
                     Monthlydata.map((item, i) => {
                       return (
-                        <li key={i} className={item.class ? item.class : ''}>
+                        <li key={i} className={item.class ? item.class : ""}>
                           <div>
                             <i className="fas fa-check-circle" />
                             <span>{item.time}</span>

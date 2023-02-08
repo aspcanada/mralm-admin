@@ -1,6 +1,6 @@
-import React from 'react'
-import { Card, CardBody, Col, Media, Table } from 'reactstrap'
-import { properylistdata } from '../../../data/manage-profile/profiledata'
+import React from "react"
+import { Card, CardBody, Col, Media, Table } from "reactstrap"
+import { properylistdata } from "../../../data/manage-profile/profiledata"
 
 const RecentProperty = () => {
   return (

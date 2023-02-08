@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import {
   Badge,
   Card,
@@ -8,9 +8,9 @@ import {
   Container,
   Row,
   Table,
-} from 'reactstrap'
-import Breadcrumb from '../components/Common/Breadcrumb'
-import { DataTable } from '../data/payments/tabledata'
+} from "reactstrap"
+import Breadcrumb from "../components/Common/Breadcrumb"
+import { DataTable } from "../data/payments/tabledata"
 
 const Payments = () => {
   return (
@@ -56,9 +56,9 @@ const Payments = () => {
                               <td>
                                 <Badge
                                   color={`${
-                                    item.Status === 'Pending'
-                                      ? 'danger'
-                                      : 'success'
+                                    item.Status === "Pending"
+                                      ? "danger"
+                                      : "success"
                                   }`}
                                 >
                                   {item.Status}

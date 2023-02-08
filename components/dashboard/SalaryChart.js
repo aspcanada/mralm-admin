@@ -1,10 +1,10 @@
-import dynamic from 'next/dynamic'
-import React from 'react'
-import { TrendingUp } from 'react-feather'
-import { Card, CardBody, Col, Row } from 'reactstrap'
-import { chartoptions, chartseries } from '../../data/dashboard/data'
+import dynamic from "next/dynamic"
+import React from "react"
+import { TrendingUp } from "react-feather"
+import { Card, CardBody, Col, Row } from "reactstrap"
+import { chartoptions, chartseries } from "../../data/dashboard/data"
 
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false })
 
 const SalaryChart = () => {
   return (

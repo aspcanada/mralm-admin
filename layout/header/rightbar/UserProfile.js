@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import React from 'react'
-import { FileText, LogOut, User } from 'react-feather'
-import { useUser } from '@auth0/nextjs-auth0'
+import Link from "next/link"
+import Image from "next/image"
+import React from "react"
+import { FileText, LogOut, User } from "react-feather"
+import { useUser } from "@auth0/nextjs-auth0"
 
 const UserProfile = () => {
   const { user, isLoading } = useUser()

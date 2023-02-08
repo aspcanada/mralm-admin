@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { FormGroup, Input, Label } from 'reactstrap'
+import * as React from "react"
+import { FormGroup, Input, Label } from "reactstrap"
 
 function _objectWithoutProperties(obj, keys) {
   var target = {}
@@ -21,7 +21,7 @@ var ReactstrapRadioInput = function ReactstrapRadioInput(_ref) {
     values = _ref$form.values,
     _ref$disabled = _ref.disabled,
     disabled = _ref$disabled === undefined ? false : _ref$disabled,
-    props = _objectWithoutProperties(_ref, ['field', 'form', 'disabled'])
+    props = _objectWithoutProperties(_ref, ["field", "form", "disabled"])
 
   return React.createElement(
     FormGroup,
@@ -32,7 +32,7 @@ var ReactstrapRadioInput = function ReactstrapRadioInput(_ref) {
       React.createElement(
         Input,
         Object.assign({}, props, {
-          type: 'radio',
+          type: "radio",
           name: field.name,
           checked: values[field.name] === field.value,
           value: field.value,

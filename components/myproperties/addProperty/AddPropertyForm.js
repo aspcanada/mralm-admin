@@ -1,38 +1,38 @@
-import { Field, Form, Formik } from 'formik'
-import React from 'react'
-import Dropzone from 'react-dropzone-uploader'
-import { Button, Col, Label, Row } from 'reactstrap'
-import * as Yup from 'yup'
+import { Field, Form, Formik } from "formik"
+import React from "react"
+import Dropzone from "react-dropzone-uploader"
+import { Button, Col, Label, Row } from "reactstrap"
+import * as Yup from "yup"
 import {
   ReactstrapInput,
   ReactstrapSelect,
-} from '../../utils/ReactStarpInputsValidation'
-import { toast } from 'react-toastify'
+} from "../../utils/ReactStarpInputsValidation"
+import { toast } from "react-toastify"
 
 const AddPropertyForm = () => {
   const getUploadParams = () => {
-    return { url: 'https://httpbin.org/post' }
+    return { url: "https://httpbin.org/post" }
   }
   return (
     <Formik
       initialValues={{
-        propertyType: '',
-        propertyStatus: '',
-        propertyPrice: '',
-        password: '',
-        maxRooms: '',
-        beds: '',
-        baths: '',
-        area: '',
-        price: '',
-        agencies: '',
-        description: '',
-        address: '',
-        zip: '',
-        anyCountry: '',
-        anyCity: '',
-        landmark: '',
-        mp4Link: '',
+        propertyType: "",
+        propertyStatus: "",
+        propertyPrice: "",
+        password: "",
+        maxRooms: "",
+        beds: "",
+        baths: "",
+        area: "",
+        price: "",
+        agencies: "",
+        description: "",
+        address: "",
+        zip: "",
+        anyCountry: "",
+        anyCity: "",
+        landmark: "",
+        mp4Link: "",
         checkBoxes: [],
       }}
       validationSchema={Yup.object().shape({
@@ -53,7 +53,7 @@ const AddPropertyForm = () => {
         landmark: Yup.string().required(),
       })}
       onSubmit={(values) => {
-        toast.success('Your data is submitted check console')
+        toast.success("Your data is submitted check console")
       }}
       render={() => (
         <Form>
@@ -75,8 +75,8 @@ const AddPropertyForm = () => {
                 className="form-control"
                 label="Property Status"
                 inputprops={{
-                  options: ['For Rent', 'For sale'],
-                  defaultOption: 'Property Status',
+                  options: ["For Rent", "For sale"],
+                  defaultOption: "Property Status",
                 }}
               />
             </Col>
@@ -97,8 +97,8 @@ const AddPropertyForm = () => {
                 className="form-control"
                 label="Max Rooms"
                 inputprops={{
-                  options: ['1', '2', '3', '4', '5', '6'],
-                  defaultOption: 'Max Rooms',
+                  options: ["1", "2", "3", "4", "5", "6"],
+                  defaultOption: "Max Rooms",
                 }}
               />
             </Col>
@@ -109,8 +109,8 @@ const AddPropertyForm = () => {
                 className="form-control"
                 label="Beds"
                 inputprops={{
-                  options: ['1', '2', '3', '4', '5', '6'],
-                  defaultOption: 'Beds',
+                  options: ["1", "2", "3", "4", "5", "6"],
+                  defaultOption: "Beds",
                 }}
               />
             </Col>
@@ -121,8 +121,8 @@ const AddPropertyForm = () => {
                 className="form-control"
                 label="Baths"
                 inputprops={{
-                  options: ['1', '2', '3', '4', '5', '6'],
-                  defaultOption: 'Baths',
+                  options: ["1", "2", "3", "4", "5", "6"],
+                  defaultOption: "Baths",
                 }}
               />
             </Col>
@@ -153,8 +153,8 @@ const AddPropertyForm = () => {
                 className="form-control"
                 label="Agencies"
                 inputprops={{
-                  options: ['1', '2', '3', '4', '5', '6'],
-                  defaultOption: 'Agencies',
+                  options: ["1", "2", "3", "4", "5", "6"],
+                  defaultOption: "Agencies",
                 }}
               />
             </Col>
@@ -199,8 +199,8 @@ const AddPropertyForm = () => {
                   className="form-control"
                   label="Any country"
                   inputprops={{
-                    options: ['1', '2', '3', '4', '5', '6'],
-                    defaultOption: 'Any country',
+                    options: ["1", "2", "3", "4", "5", "6"],
+                    defaultOption: "Any country",
                   }}
                 />
               </Col>
@@ -211,8 +211,8 @@ const AddPropertyForm = () => {
                   className="form-control"
                   label="Any City"
                   inputprops={{
-                    options: ['1', '2', '3', '4', '5', '6'],
-                    defaultOption: 'Any City',
+                    options: ["1", "2", "3", "4", "5", "6"],
+                    defaultOption: "Any City",
                   }}
                 />
               </Col>
@@ -241,7 +241,7 @@ const AddPropertyForm = () => {
                   inputContent="Drop A File"
                   accept="image/*,audio/*,video/*"
                   styles={{
-                    dropzoneActive: { borderColor: 'green' },
+                    dropzoneActive: { borderColor: "green" },
                   }}
                 />
               </div>
@@ -267,7 +267,7 @@ const AddPropertyForm = () => {
                       className="checkbox_animated"
                       id="chk-ani"
                       type="checkbox"
-                    />{' '}
+                    />{" "}
                     Emergency Exit
                   </Label>
                   <Label htmlFor="chk-ani1">
@@ -277,7 +277,7 @@ const AddPropertyForm = () => {
                       className="checkbox_animated"
                       id="chk-ani1"
                       type="checkbox"
-                    />{' '}
+                    />{" "}
                     CCTV
                   </Label>
                   <Label htmlFor="chk-ani2">
@@ -287,7 +287,7 @@ const AddPropertyForm = () => {
                       className="checkbox_animated"
                       id="chk-ani2"
                       type="checkbox"
-                    />{' '}
+                    />{" "}
                     Free Wi-Fi
                   </Label>
                   <Label htmlFor="chk-ani3">
@@ -297,7 +297,7 @@ const AddPropertyForm = () => {
                       className="checkbox_animated"
                       id="chk-ani3"
                       type="checkbox"
-                    />{' '}
+                    />{" "}
                     Free Parking In The Area
                   </Label>
                   <Label htmlFor="chk-ani4">
@@ -307,7 +307,7 @@ const AddPropertyForm = () => {
                       className="checkbox_animated"
                       id="chk-ani4"
                       type="checkbox"
-                    />{' '}
+                    />{" "}
                     Air Conditioning
                   </Label>
                   <Label htmlFor="chk-ani5">
@@ -317,7 +317,7 @@ const AddPropertyForm = () => {
                       className="checkbox_animated"
                       id="chk-ani5"
                       type="checkbox"
-                    />{' '}
+                    />{" "}
                     Security Guard
                   </Label>
                   <Label htmlFor="chk-ani6">
@@ -327,7 +327,7 @@ const AddPropertyForm = () => {
                       className="checkbox_animated"
                       id="chk-ani6"
                       type="checkbox"
-                    />{' '}
+                    />{" "}
                     Terrance
                   </Label>
                   <Label htmlFor="chk-ani7">
@@ -337,7 +337,7 @@ const AddPropertyForm = () => {
                       className="checkbox_animated"
                       id="chk-ani7"
                       type="checkbox"
-                    />{' '}
+                    />{" "}
                     Laundry Service
                   </Label>
                   <Label htmlFor="chk-ani8">
@@ -347,7 +347,7 @@ const AddPropertyForm = () => {
                       className="checkbox_animated"
                       id="chk-ani8"
                       type="checkbox"
-                    />{' '}
+                    />{" "}
                     Elevator Lift
                   </Label>
                   <Label htmlFor="chk-ani9">
@@ -357,7 +357,7 @@ const AddPropertyForm = () => {
                       className="checkbox_animated"
                       id="chk-ani9"
                       type="checkbox"
-                    />{' '}
+                    />{" "}
                     Balcony
                   </Label>
                 </div>

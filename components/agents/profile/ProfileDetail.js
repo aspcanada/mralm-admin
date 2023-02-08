@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import React from 'react'
-import { Button, Card, CardBody, Col, Media } from 'reactstrap'
+import Link from "next/link"
+import React from "react"
+import { Button, Card, CardBody, Col, Media } from "reactstrap"
 
 const ProfileDetail = () => {
   return (
@@ -16,7 +16,7 @@ const ProfileDetail = () => {
             <Media body>
               <h4>Good Evening , Zack Lee</h4>
               <span className="light-font">
-                My current address{' '}
+                My current address{" "}
                 <a href="#" className="font-theme">
                   Mina Road, Dubai, United Arab Emirates
                 </a>

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { Col, Row } from 'reactstrap'
-import DealBox from './DealBox'
+import React, { useEffect, useState } from "react"
+import { Col, Row } from "reactstrap"
+import DealBox from "./DealBox"
 
 // const LoadMore = ({size, setSize}) => {
 //     return (

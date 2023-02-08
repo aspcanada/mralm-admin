@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import React from 'react'
-import { Media, Table } from 'reactstrap'
-import { Assignessdata } from '../../data/dashboard/data'
+import Link from "next/link"
+import React from "react"
+import { Media, Table } from "reactstrap"
+import { Assignessdata } from "../../data/dashboard/data"
 
 const Assigness = () => {
   return (

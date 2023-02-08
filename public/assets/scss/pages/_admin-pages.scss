@@ -356,7 +356,7 @@ footer {
   position: relative;
 
   &:before {
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     background-color: $gray-60;
@@ -950,7 +950,7 @@ footer {
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     background: var(--theme-gradient1);
     right: -90px;
     top: 0;
@@ -986,7 +986,7 @@ footer {
 
       &::after {
         position: absolute;
-        content: '';
+        content: "";
         bottom: -21px;
         left: 7.5px;
         height: 40px;
@@ -1077,7 +1077,7 @@ footer {
 
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       width: 30px;
       height: 2px;
       background-color: var(--theme-default2);
@@ -1195,7 +1195,7 @@ footer {
 
 // add agent css
 .gj-datepicker-bootstrap {
-  [role='right-icon'] {
+  [role="right-icon"] {
     button {
       .gj-icon,
       .material-icons {
@@ -1663,7 +1663,7 @@ body {
     }
 
     .gj-datepicker-bootstrap {
-      [role='right-icon'] {
+      [role="right-icon"] {
         button {
           border: 1px solid $dark-border-color;
           background: $dark-bg;

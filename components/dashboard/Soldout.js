@@ -1,11 +1,11 @@
-import dynamic from 'next/dynamic'
-import Link from 'next/link'
-import React from 'react'
-import { ChevronRight } from 'react-feather'
-import { Card, CardBody, CardHeader, Col, Media } from 'reactstrap'
-import { SoldChart, soldseries } from '../../data/dashboard/data'
+import dynamic from "next/dynamic"
+import Link from "next/link"
+import React from "react"
+import { ChevronRight } from "react-feather"
+import { Card, CardBody, CardHeader, Col, Media } from "reactstrap"
+import { SoldChart, soldseries } from "../../data/dashboard/data"
 
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false })
 
 const Soldout = () => {
   return (

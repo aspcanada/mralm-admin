@@ -1,7 +1,7 @@
-import { Col, Container, Row } from 'reactstrap'
-import Breadcrumb from '../../components/Common/Breadcrumb'
-import Listview from '../../components/Deal/Listview'
-import useSWRInfinite from 'swr/infinite'
+import { Col, Container, Row } from "reactstrap"
+import Breadcrumb from "../../components/Common/Breadcrumb"
+import Listview from "../../components/Deal/Listview"
+import useSWRInfinite from "swr/infinite"
 
 // A function to get the SWR key of each page,
 // its return value will be accepted by `fetcher`.
@@ -26,10 +26,10 @@ const LoadMore = ({ size, setSize, isLoadingMore, isReachingEnd }) => {
           >
             <span aria-hidden="true">
               {isLoadingMore
-                ? 'loading...'
+                ? "loading..."
                 : isReachingEnd
-                ? 'No more deals'
-                : 'Load More'}
+                ? "No more deals"
+                : "Load More"}
             </span>
           </button>
         </li>
@@ -50,7 +50,7 @@ const DealList = () => {
   const isLoadingInitialData = !data && !error
   const isLoadingMore =
     isLoadingInitialData ||
-    (size > 0 && data && typeof data[size - 1] === 'undefined')
+    (size > 0 && data && typeof data[size - 1] === "undefined")
   const isEmpty = data?.[0]?.length === 0
   const isReachingEnd =
     isEmpty || (data && data[data.length - 1]?.length < limit)
@@ -72,8 +72,8 @@ const DealList = () => {
                       <div className="filter-panel">
                         <div className="listing-option">
                           <h5 className="mb-0">
-                            Showing <span>{size}</span> page(s) of{' '}
-                            <span>{isLoadingMore ? '...' : deals.length}</span>{' '}
+                            Showing <span>{size}</span> page(s) of{" "}
+                            <span>{isLoadingMore ? "..." : deals.length}</span>{" "}
                             deals
                           </h5>
                           {/* <h5 className="mb-0">Showing <span>{paginationData.GetStart()}-{paginationData.GetEnd()} of {paginationData.Totalproducts}</span> Listings</h5> */}

@@ -1,14 +1,14 @@
-import React from 'react'
-import { Col, Container, Row } from 'reactstrap'
-import Breadcrumb from '../../components/Common/Breadcrumb'
-import About from '../../components/manageuser/profile/About'
-import Following from '../../components/manageuser/profile/Following'
-import Friends from '../../components/manageuser/profile/Friends'
-import ProfileDetail from '../../components/manageuser/profile/ProfileDetail'
-import RecentChart from '../../components/manageuser/profile/RecentChart'
-import RecentProperty from '../../components/manageuser/profile/RecentProperty'
-import UserChart from '../../components/manageuser/profile/UserChart'
-import { Aboutdata } from '../../data/manage-profile/profiledata'
+import React from "react"
+import { Col, Container, Row } from "reactstrap"
+import Breadcrumb from "../../components/Common/Breadcrumb"
+import About from "../../components/manageuser/profile/About"
+import Following from "../../components/manageuser/profile/Following"
+import Friends from "../../components/manageuser/profile/Friends"
+import ProfileDetail from "../../components/manageuser/profile/ProfileDetail"
+import RecentChart from "../../components/manageuser/profile/RecentChart"
+import RecentProperty from "../../components/manageuser/profile/RecentProperty"
+import UserChart from "../../components/manageuser/profile/UserChart"
+import { Aboutdata } from "../../data/manage-profile/profiledata"
 
 const Profile = () => {
   return (

@@ -1,36 +1,36 @@
-import React, { useState } from 'react'
-import { Settings, X } from 'react-feather'
-import { Input } from 'reactstrap'
+import React, { useState } from "react"
+import { Settings, X } from "react-feather"
+import { Input } from "reactstrap"
 
 const Customizer = () => {
   const [openCustomizer, setOpenCustomizer] = useState(false)
 
   const changeThemeColor = (event) => {
     event
-      ? document.body.classList.add('dark-layout')
-      : document.body.classList.remove('dark-layout')
+      ? document.body.classList.add("dark-layout")
+      : document.body.classList.remove("dark-layout")
   }
   const changeThemeType = (event) => {
     event
-      ? document.body.classList.add('rtl')
-      : document.body.classList.remove('rtl')
-    event ? (document.body.dir = 'rtl') : (document.body.dir = 'ltr')
+      ? document.body.classList.add("rtl")
+      : document.body.classList.remove("rtl")
+    event ? (document.body.dir = "rtl") : (document.body.dir = "ltr")
   }
   const handleColor1 = (e) => {
     document.documentElement.style.setProperty(
-      '--theme-default',
+      "--theme-default",
       e.target.value
     )
   }
   const handleColor2 = (e) => {
     document.documentElement.style.setProperty(
-      '--theme-default2',
+      "--theme-default2",
       e.target.value
     )
   }
 
   return (
-    <div className={`customizer-wrap ${openCustomizer ? 'open' : ''}`}>
+    <div className={`customizer-wrap ${openCustomizer ? "open" : ""}`}>
       <div className="customizer-links">
         <Settings onClick={() => setOpenCustomizer(true)} />
       </div>

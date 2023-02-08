@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react"
 
 const DealLabel = ({ labels }) => {
   return (
@@ -7,12 +7,12 @@ const DealLabel = ({ labels }) => {
         labels?.map((values, i) => {
           return (
             <Fragment key={i}>
-              {values === 'Expired' && (
+              {values === "Expired" && (
                 <div>
                   <span className="label label-danger">{values}</span>
                 </div>
               )}
-              {values === 'Active' && (
+              {values === "Active" && (
                 <div>
                   <span className="label label-success">{values}</span>
                 </div>

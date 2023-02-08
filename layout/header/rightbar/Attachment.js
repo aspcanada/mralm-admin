@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import React from 'react'
-import { Save } from 'react-feather'
-import { Media } from 'reactstrap'
+import Link from "next/link"
+import React from "react"
+import { Save } from "react-feather"
+import { Media } from "reactstrap"
 
 const Attachment = () => {
   return (

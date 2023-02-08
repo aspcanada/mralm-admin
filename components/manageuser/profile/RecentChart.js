@@ -1,12 +1,12 @@
-import dynamic from 'next/dynamic'
-import React from 'react'
-import { Card, CardBody } from 'reactstrap'
+import dynamic from "next/dynamic"
+import React from "react"
+import { Card, CardBody } from "reactstrap"
 import {
   Erningseries,
   ErningsOption,
-} from '../../../data/manage-profile/profiledata'
+} from "../../../data/manage-profile/profiledata"
 
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false })
 
 const RecentChart = () => {
   return (

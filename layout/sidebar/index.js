@@ -1,16 +1,16 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import React from 'react'
-import { ChevronsLeft } from 'react-feather'
-import { Media } from 'reactstrap'
-import SidebarMenu from './SidebarMenu'
-import { useUser } from '@auth0/nextjs-auth0'
+import Link from "next/link"
+import Image from "next/image"
+import React from "react"
+import { ChevronsLeft } from "react-feather"
+import { Media } from "reactstrap"
+import SidebarMenu from "./SidebarMenu"
+import { useUser } from "@auth0/nextjs-auth0"
 
 const Sidebar = ({ toggle, setToggle }) => {
   const { user, error, isLoading } = useUser()
 
   return (
-    <div className={`page-sidebar ${!toggle ? 'close_icon' : ''}`}>
+    <div className={`page-sidebar ${!toggle ? "close_icon" : ""}`}>
       <div className="logo-wrap">
         <Link href="/">
           <img

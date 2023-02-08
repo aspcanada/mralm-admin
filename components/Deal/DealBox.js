@@ -1,17 +1,17 @@
-import Link from 'next/link'
-import React from 'react'
-import { Calendar, Camera, Heart, Percent, PieChart } from 'react-feather'
-import ImageSlider from '../ImageSlider'
-import DealLabel from './DealLabel'
-import { useRouter } from 'next/router'
-import { toast } from 'react-toastify'
+import Link from "next/link"
+import React from "react"
+import { Calendar, Camera, Heart, Percent, PieChart } from "react-feather"
+import ImageSlider from "../ImageSlider"
+import DealLabel from "./DealLabel"
+import { useRouter } from "next/router"
+import { toast } from "react-toastify"
 
 const DealBox = ({ data }) => {
-  const symbol = '$'
+  const symbol = "$"
   const currencyValue = 1
   const router = useRouter()
   const NavigateFavourit = () => {
-    toast.success('Added to favourites.')
+    toast.success("Added to favourites.")
     // router.push('/myproperties/propertylist')
   }
 
@@ -51,7 +51,7 @@ const DealBox = ({ data }) => {
           </div>
         </div>
         <div className="property-details">
-          <span className="font-roboto">{data.city || 'USA'} </span>
+          <span className="font-roboto">{data.city || "USA"} </span>
           <Link
             href={
               Array.isArray(data.img)
@@ -67,7 +67,7 @@ const DealBox = ({ data }) => {
           </h6>
           <p className="font-roboto">
             {data.details ||
-              'This home provides wonderful entertaining spaces with a chef kitchen opening. Elegant retreat in a quiet Coral Gables setting..'}{' '}
+              "This home provides wonderful entertaining spaces with a chef kitchen opening. Elegant retreat in a quiet Coral Gables setting.."}{" "}
           </p>
           <ul>
             <li>

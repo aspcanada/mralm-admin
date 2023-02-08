@@ -1,12 +1,12 @@
-import { useRouter } from 'next/router'
-import React, { useEffect } from 'react'
-import Loader from '../layout/Loader'
+import { useRouter } from "next/router"
+import React, { useEffect } from "react"
+import Loader from "../layout/Loader"
 
 const Index = () => {
   const router = useRouter()
 
   useEffect(() => {
-    router.replace('/dashboard')
+    router.replace("/dashboard")
   }, [])
 
   return (

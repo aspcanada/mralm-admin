@@ -1,7 +1,7 @@
-import React from 'react'
-import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap'
-import Breadcrumb from '../../components/Common/Breadcrumb'
-import AddPropertyForm from '../../components/myproperties/addProperty/AddPropertyForm'
+import React from "react"
+import { Card, CardBody, CardHeader, Col, Container, Row } from "reactstrap"
+import Breadcrumb from "../../components/Common/Breadcrumb"
+import AddPropertyForm from "../../components/myproperties/addProperty/AddPropertyForm"
 
 const AddProperty = () => {
   return (

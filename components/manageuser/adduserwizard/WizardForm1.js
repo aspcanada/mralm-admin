@@ -1,21 +1,21 @@
-import { Field, Form, Formik } from 'formik'
-import React from 'react'
-import { Button, Col, Row } from 'reactstrap'
-import * as Yup from 'yup'
+import { Field, Form, Formik } from "formik"
+import React from "react"
+import { Button, Col, Row } from "reactstrap"
+import * as Yup from "yup"
 import {
   ReactstrapInput,
   ReactstrapSelect,
-} from '../../utils/ReactStarpInputsValidation'
+} from "../../utils/ReactStarpInputsValidation"
 
 const WizardForm1 = ({ setSteps, setData, data }) => {
   return (
     <Formik
       initialValues={{
-        firstname: data.firstname || '',
-        lastname: data.lastname || '',
-        gender: data.gender || '',
-        phone: data.phone || '',
-        dob: data.dob || '',
+        firstname: data.firstname || "",
+        lastname: data.lastname || "",
+        gender: data.gender || "",
+        phone: data.phone || "",
+        dob: data.dob || "",
       }}
       validationSchema={Yup.object().shape({
         firstname: Yup.string().required(),
@@ -62,8 +62,8 @@ const WizardForm1 = ({ setSteps, setData, data }) => {
                   className="form-control"
                   label="Gender"
                   inputprops={{
-                    options: ['Male', 'Female'],
-                    defaultOption: 'Gender',
+                    options: ["Male", "Female"],
+                    defaultOption: "Gender",
                   }}
                 />
               </Col>

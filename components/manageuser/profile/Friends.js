@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import React from 'react'
-import { Card, CardBody } from 'reactstrap'
-import { Friendsdata } from '../../../data/manage-profile/profiledata'
+import Link from "next/link"
+import React from "react"
+import { Card, CardBody } from "reactstrap"
+import { Friendsdata } from "../../../data/manage-profile/profiledata"
 
 const Friends = () => {
   return (

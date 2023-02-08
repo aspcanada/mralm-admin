@@ -8,20 +8,20 @@ import {
   MapPin,
   UserPlus,
   Users,
-} from 'react-feather'
+} from "react-feather"
 
 export const SidebarMenuItem = [
   {
-    title: 'Dashboard',
+    title: "Dashboard",
     icon: <Airplay />,
-    type: 'link',
-    path: '/dashboard',
+    type: "link",
+    path: "/dashboard",
   },
   {
-    title: 'Deals',
+    title: "Deals",
     icon: <Grid />,
-    type: 'link',
-    path: '/deals',
+    type: "link",
+    path: "/deals",
 
     // children: [
     //     {
@@ -42,9 +42,9 @@ export const SidebarMenuItem = [
     // ]
   },
   {
-    title: 'Users',
+    title: "Users",
     icon: <Users />,
-    type: 'link',
-    path: '/users',
+    type: "link",
+    path: "/users",
   },
 ]

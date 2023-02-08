@@ -1,6 +1,6 @@
-import { withApiAuthRequired } from '@auth0/nextjs-auth0'
+import { withApiAuthRequired } from "@auth0/nextjs-auth0"
 
-const apiDomain = 'http://localhost:8081'
+const apiDomain = "http://localhost:8081"
 
 async function commonHandler(req, res) {
   try {

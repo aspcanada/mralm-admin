@@ -1,7 +1,7 @@
-import React from 'react'
-import { MoreHorizontal } from 'react-feather'
-import { Card, CardBody, CardHeader, Col, Media, Table } from 'reactstrap'
-import { TransactionData } from '../../data/Report/data'
+import React from "react"
+import { MoreHorizontal } from "react-feather"
+import { Card, CardBody, CardHeader, Col, Media, Table } from "reactstrap"
+import { TransactionData } from "../../data/Report/data"
 
 const RecentTransaction = () => {
   return (
@@ -51,9 +51,9 @@ const RecentTransaction = () => {
                         <td>
                           <span
                             className={`label ${
-                              item.status === 'Pending'
-                                ? 'badge-light-danger'
-                                : 'badge-light-success'
+                              item.status === "Pending"
+                                ? "badge-light-danger"
+                                : "badge-light-success"
                             }`}
                           >
                             {item.status}

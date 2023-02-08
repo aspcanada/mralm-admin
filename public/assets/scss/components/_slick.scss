@@ -79,12 +79,12 @@
   }
   .slick-prev {
     &:before {
-      content: '\f060';
+      content: "\f060";
     }
   }
   .slick-next {
     &:before {
-      content: '\f061';
+      content: "\f061";
     }
   }
 }
@@ -107,13 +107,13 @@
   .slick-prev {
     left: -75px;
     &:before {
-      content: '\f053';
+      content: "\f053";
     }
   }
   .slick-next {
     right: -75px;
     &:before {
-      content: '\f054';
+      content: "\f054";
     }
   }
 }
@@ -212,7 +212,7 @@
     }
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       width: 70px;
       height: 70px;
       background: $white;
@@ -223,7 +223,7 @@
     .slick-thumb-nav {
       &::after {
         position: absolute;
-        content: '';
+        content: "";
         width: 70px;
         height: 70px;
         background: $white;
@@ -235,7 +235,7 @@
   }
   .slick-next {
     &::before {
-      content: '\f061';
+      content: "\f061";
     }
   }
   .slick-prev {
@@ -243,7 +243,7 @@
     align-items: center;
     justify-content: center;
     &::before {
-      content: '\f060';
+      content: "\f060";
     }
   }
   &.main-property-slider {
@@ -322,12 +322,12 @@
   }
   .slick-prev {
     &::before {
-      content: '\f060';
+      content: "\f060";
     }
   }
   .slick-next {
     &::before {
-      content: '\f061';
+      content: "\f061";
     }
   }
   &.arrow-right {

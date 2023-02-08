@@ -1,13 +1,13 @@
-import React from 'react'
-import { Check } from 'react-feather'
-import { Media } from 'reactstrap'
+import React from "react"
+import { Check } from "react-feather"
+import { Media } from "reactstrap"
 
 const WizardFormHeader = ({ steps }) => {
   return (
     <ul className="wizard-steps">
       <li
-        className={`step-container step-1 ${steps === 1 ? 'active' : ''} ${
-          steps > 1 ? 'disabled' : ''
+        className={`step-container step-1 ${steps === 1 ? "active" : ""} ${
+          steps > 1 ? "disabled" : ""
         }`}
       >
         <Media className="media">
@@ -22,8 +22,8 @@ const WizardFormHeader = ({ steps }) => {
         </Media>
       </li>
       <li
-        className={`step-container step-2 ${steps === 2 ? 'active' : ''} ${
-          steps > 2 ? 'disabled' : ''
+        className={`step-container step-2 ${steps === 2 ? "active" : ""} ${
+          steps > 2 ? "disabled" : ""
         }`}
       >
         <Media className="media">
@@ -38,8 +38,8 @@ const WizardFormHeader = ({ steps }) => {
         </Media>
       </li>
       <li
-        className={`step-container step-3 ${steps === 3 ? 'active' : ''} ${
-          steps > 3 ? 'disabled' : ''
+        className={`step-container step-3 ${steps === 3 ? "active" : ""} ${
+          steps > 3 ? "disabled" : ""
         }`}
       >
         <Media className="media">

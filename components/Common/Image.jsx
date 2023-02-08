@@ -1,17 +1,17 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from "react"
 
 const Img = (props) => {
   const bgImg = useRef(null)
 
   useEffect(() => {
     const image = bgImg.current
-    if (image.classList.contains('bg-img')) {
+    if (image.classList.contains("bg-img")) {
       const parentElement = image.parentElement
-      const src = image.getAttribute('src')
-      parentElement.classList.add('bg-size')
-      image.style.display = 'none'
+      const src = image.getAttribute("src")
+      parentElement.classList.add("bg-size")
+      image.style.display = "none"
       parentElement.setAttribute(
-        'style',
+        "style",
         `
         background-image: url(${src});
         background-size:cover; 

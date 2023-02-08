@@ -1,10 +1,10 @@
-import dynamic from 'next/dynamic'
-import Link from 'next/link'
-import React from 'react'
-import { Card, CardBody, CardHeader, Col } from 'reactstrap'
-import { Timeoptions, Timeseries } from '../../data/dashboard/data'
+import dynamic from "next/dynamic"
+import Link from "next/link"
+import React from "react"
+import { Card, CardBody, CardHeader, Col } from "reactstrap"
+import { Timeoptions, Timeseries } from "../../data/dashboard/data"
 
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false })
 
 const ProjectTimeline = () => {
   return (

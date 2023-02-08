@@ -145,7 +145,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 36%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -154,7 +154,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 40%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -163,7 +163,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 45%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -172,7 +172,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 50%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -181,7 +181,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 55%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -190,7 +190,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 63%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -199,7 +199,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 65%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -208,7 +208,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 70%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -217,7 +217,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 59%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -226,7 +226,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 60%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -235,7 +235,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 66.66%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -244,7 +244,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 93%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -253,7 +253,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 75%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -262,7 +262,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 100%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -271,7 +271,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 127.7777778%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -280,7 +280,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 150%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -289,7 +289,7 @@ $i: 10;
   .bg-size {
     &:before {
       padding-top: 200%;
-      content: '';
+      content: "";
       display: block;
     }
   }
@@ -333,9 +333,9 @@ $i: 10;
 
 .feature-image {
   .zoom-image {
-    z-index: '10';
-    height: '100%';
-    width: '100%';
+    z-index: "10";
+    height: "100%";
+    width: "100%";
   }
 }
 
@@ -411,7 +411,7 @@ $i: 10;
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease-in-out;
-  [class='dark-layout'] & {
+  [class="dark-layout"] & {
     background-color: $dark-bg3;
   }
   &.nav-submenu {
@@ -435,7 +435,7 @@ $i: 10;
       .media-body {
         margin-left: 10px;
         text-align: left;
-        [dir='rtl'] & {
+        [dir="rtl"] & {
           text-align: right;
           margin-right: 10px;
           margin-left: unset;
@@ -466,7 +466,7 @@ $i: 10;
       width: 320px;
       right: 0;
       left: unset;
-      [dir='rtl'] & {
+      [dir="rtl"] & {
         left: 0;
         right: unset;
       }

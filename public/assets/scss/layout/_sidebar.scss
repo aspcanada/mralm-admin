@@ -20,7 +20,7 @@
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-bottom: 7px solid $white;
-    content: '';
+    content: "";
     top: -7px;
     position: absolute;
     right: 10px;
@@ -33,7 +33,7 @@
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-bottom: 7px solid $gray-30;
-    content: '';
+    content: "";
     top: -7px;
     position: absolute;
     right: 10px;
@@ -102,7 +102,7 @@
         position: absolute;
         top: 10px;
         left: 20px;
-        content: '\f002';
+        content: "\f002";
         font-size: 16px;
         color: $light-color;
         font-family: $font-awesome;
@@ -413,7 +413,7 @@
 
           &::before {
             position: absolute;
-            content: '';
+            content: "";
             width: 30px;
             height: 2px;
             background-color: var(--theme-default);

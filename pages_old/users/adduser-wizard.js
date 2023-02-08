@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { Card, CardBody, Col, Container, Row } from 'reactstrap'
-import Breadcrumb from '../../components/Common/Breadcrumb'
-import WizardForm1 from '../../components/manageuser/adduserwizard/WizardForm1'
-import WizardForm2 from '../../components/manageuser/adduserwizard/WizardForm2'
-import WizardForm3 from '../../components/manageuser/adduserwizard/WizardForm3'
-import WizardFormHeader from '../../components/manageuser/adduserwizard/WizardFormHeader'
+import React, { useState } from "react"
+import { Card, CardBody, Col, Container, Row } from "reactstrap"
+import Breadcrumb from "../../components/Common/Breadcrumb"
+import WizardForm1 from "../../components/manageuser/adduserwizard/WizardForm1"
+import WizardForm2 from "../../components/manageuser/adduserwizard/WizardForm2"
+import WizardForm3 from "../../components/manageuser/adduserwizard/WizardForm3"
+import WizardFormHeader from "../../components/manageuser/adduserwizard/WizardFormHeader"
 
 const AddUserWizard = () => {
   const [steps, setSteps] = useState(1)

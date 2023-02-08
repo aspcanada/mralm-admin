@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import React from 'react'
-import { Media } from 'reactstrap'
-import { Propertydata } from '../../data/dashboard/data'
+import Link from "next/link"
+import React from "react"
+import { Media } from "reactstrap"
+import { Propertydata } from "../../data/dashboard/data"
 
 const Properylist = () => {
   return (

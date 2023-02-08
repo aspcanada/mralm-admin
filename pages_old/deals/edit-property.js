@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import {
   Card,
   CardBody,
@@ -7,9 +7,9 @@ import {
   Container,
   Form,
   Row,
-} from 'reactstrap'
-import Breadcrumb from '../../components/Common/Breadcrumb'
-import EditPropertyForm from '../../components/myproperties/editProperty/EditPropertyForm'
+} from "reactstrap"
+import Breadcrumb from "../../components/Common/Breadcrumb"
+import EditPropertyForm from "../../components/myproperties/editProperty/EditPropertyForm"
 
 const EditProperty = () => {
   return (

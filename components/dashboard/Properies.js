@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import React from 'react'
-import { ChevronRight } from 'react-feather'
-import { Card, CardBody, CardHeader, Col, Media, Row } from 'reactstrap'
+import Link from "next/link"
+import React from "react"
+import { ChevronRight } from "react-feather"
+import { Card, CardBody, CardHeader, Col, Media, Row } from "reactstrap"
 
 const Properies = () => {
   return (

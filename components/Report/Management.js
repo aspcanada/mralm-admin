@@ -1,7 +1,7 @@
-import React from 'react'
-import { Download } from 'react-feather'
-import { Card, CardBody, CardHeader, Col, Media, Table } from 'reactstrap'
-import { managedata } from '../../data/Report/data'
+import React from "react"
+import { Download } from "react-feather"
+import { Card, CardBody, CardHeader, Col, Media, Table } from "reactstrap"
+import { managedata } from "../../data/Report/data"
 
 const Management = () => {
   return (

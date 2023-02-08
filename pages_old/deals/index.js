@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { Col, Container, Input, Label, Row } from 'reactstrap'
-import Breadcrumb from '../../components/Common/Breadcrumb'
-import Listview from '../../components/Deal/Listview'
-import usePagination from '../../components/utils/usePagination'
-import useSWR from 'swr'
-import useSWRInfinite from 'swr/infinite'
+import React, { useEffect, useState } from "react"
+import { Col, Container, Input, Label, Row } from "reactstrap"
+import Breadcrumb from "../../components/Common/Breadcrumb"
+import Listview from "../../components/Deal/Listview"
+import usePagination from "../../components/utils/usePagination"
+import useSWR from "swr"
+import useSWRInfinite from "swr/infinite"
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
@@ -31,10 +31,10 @@ const LoadMore = ({ size, setSize, isLoadingMore, isReachingEnd }) => {
           >
             <span aria-hidden="true">
               {isLoadingMore
-                ? 'loading...'
+                ? "loading..."
                 : isReachingEnd
-                ? 'No more deals'
-                : 'Load More'}
+                ? "No more deals"
+                : "Load More"}
             </span>
           </button>
         </li>
@@ -51,7 +51,7 @@ const DealList = () => {
   const isLoadingInitialData = !data && !error
   const isLoadingMore =
     isLoadingInitialData ||
-    (size > 0 && data && typeof data[size - 1] === 'undefined')
+    (size > 0 && data && typeof data[size - 1] === "undefined")
   const isEmpty = data?.[0]?.length === 0
   const isReachingEnd =
     isEmpty || (data && data[data.length - 1]?.length < limit)
@@ -73,8 +73,8 @@ const DealList = () => {
                       <div className="filter-panel">
                         <div className="listing-option">
                           <h5 className="mb-0">
-                            Showing <span>{size}</span> page(s) of{' '}
-                            <span>{isLoadingMore ? '...' : deals.length}</span>{' '}
+                            Showing <span>{size}</span> page(s) of{" "}
+                            <span>{isLoadingMore ? "..." : deals.length}</span>{" "}
                             deals
                           </h5>
                           {/* <h5 className="mb-0">Showing <span>{paginationData.GetStart()}-{paginationData.GetEnd()} of {paginationData.Totalproducts}</span> Listings</h5> */}

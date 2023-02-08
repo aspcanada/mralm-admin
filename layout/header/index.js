@@ -1,7 +1,7 @@
-import React from 'react'
-import { ChevronsLeft, Maximize, Search } from 'react-feather'
-import { Col, FormGroup, Input, Row } from 'reactstrap'
-import Rightbar from './rightbar'
+import React from "react"
+import { ChevronsLeft, Maximize, Search } from "react-feather"
+import { Col, FormGroup, Input, Row } from "reactstrap"
+import Rightbar from "./rightbar"
 
 const Header = ({ setToggle, toggle }) => {
   const goFull = () => {
@@ -30,7 +30,7 @@ const Header = ({ setToggle, toggle }) => {
   }
   return (
     <>
-      <Row className={`page-main-header ${!toggle ? 'close_icon' : ''}`}>
+      <Row className={`page-main-header ${!toggle ? "close_icon" : ""}`}>
         <Col id="sidebar-toggle" className="toggle-sidebar col-auto">
           <ChevronsLeft size={18} onClick={() => setToggle(!toggle)} />
         </Col>

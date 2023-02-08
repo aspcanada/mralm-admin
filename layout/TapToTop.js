@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
 
 const TapToTop = () => {
   const [goingUp, setGoingUp] = useState(false)
@@ -13,24 +13,24 @@ const TapToTop = () => {
       }
     }
     typeof window !== undefined
-      ? window.addEventListener('scroll', handleScroll, { passive: true })
-      : ''
+      ? window.addEventListener("scroll", handleScroll, { passive: true })
+      : ""
     return () =>
       typeof window !== undefined
-        ? window.removeEventListener('scroll', handleScroll)
-        : ''
+        ? window.removeEventListener("scroll", handleScroll)
+        : ""
   }, [goingUp])
 
   const tapToTop = () => {
     typeof window !== undefined
       ? window.scrollTo({
-          behavior: 'smooth',
+          behavior: "smooth",
           top: 0,
         })
-      : ''
+      : ""
   }
   return (
-    <div className={`tap-top ${goingUp ? 'top' : ''}`} onClick={tapToTop}>
+    <div className={`tap-top ${goingUp ? "top" : ""}`} onClick={tapToTop}>
       <div>
         <i className="fas fa-arrow-up"></i>
       </div>

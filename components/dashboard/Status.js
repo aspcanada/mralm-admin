@@ -1,6 +1,6 @@
-import React from 'react'
-import { TrendingUp } from 'react-feather'
-import { Card, CardBody, Col, Media } from 'reactstrap'
+import React from "react"
+import { TrendingUp } from "react-feather"
+import { Card, CardBody, Col, Media } from "reactstrap"
 
 const Status = () => {
   return (

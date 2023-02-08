@@ -1,31 +1,31 @@
-import { Field, Form, Formik } from 'formik'
-import React from 'react'
-import Dropzone from 'react-dropzone-uploader'
-import { Button, Col, Row } from 'reactstrap'
-import * as Yup from 'yup'
+import { Field, Form, Formik } from "formik"
+import React from "react"
+import Dropzone from "react-dropzone-uploader"
+import { Button, Col, Row } from "reactstrap"
+import * as Yup from "yup"
 import {
   ReactstrapInput,
   ReactstrapSelect,
-} from '../../utils/ReactStarpInputsValidation'
+} from "../../utils/ReactStarpInputsValidation"
 
 const EditUserdataForm = () => {
   const getUploadParams = () => {
-    return { url: 'https://httpbin.org/post' }
+    return { url: "https://httpbin.org/post" }
   }
   return (
     <Formik
       initialValues={{
-        firstname: '',
-        lastname: '',
-        gender: '',
-        phone: '',
-        dob: '',
-        email: '',
-        password: '',
-        confirmPW: '',
-        description: '',
-        address: '',
-        zip: '',
+        firstname: "",
+        lastname: "",
+        gender: "",
+        phone: "",
+        dob: "",
+        email: "",
+        password: "",
+        confirmPW: "",
+        description: "",
+        address: "",
+        zip: "",
       }}
       validationSchema={Yup.object().shape({
         firstname: Yup.string().required(),
@@ -41,7 +41,7 @@ const EditUserdataForm = () => {
         zip: Yup.string().min(6).max(6).required(),
       })}
       onSubmit={(values) => {
-        alert('Your data is submitted check console')
+        alert("Your data is submitted check console")
       }}
       render={() => (
         <Form>
@@ -73,8 +73,8 @@ const EditUserdataForm = () => {
                 className="form-control"
                 label="Gender"
                 inputprops={{
-                  options: ['Male', 'Female'],
-                  defaultOption: 'Gender',
+                  options: ["Male", "Female"],
+                  defaultOption: "Gender",
                 }}
               />
             </Col>
@@ -171,12 +171,12 @@ const EditUserdataForm = () => {
                   inputContent="Drop A File"
                   accept="image/*,audio/*,video/*"
                   styles={{
-                    dropzoneActive: { borderColor: 'green' },
+                    dropzoneActive: { borderColor: "green" },
                   }}
                 >
                   <h6>Drop files here or click to upload.</h6>
                   <span className="note needsclick">
-                    (This is just a demo dropzone. Selected files are{' '}
+                    (This is just a demo dropzone. Selected files are{" "}
                     <strong>not</strong> actually uploaded.)
                   </span>
                 </Dropzone>

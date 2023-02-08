@@ -1,18 +1,18 @@
-import Link from 'next/link'
-import React from 'react'
-import { Camera, Heart } from 'react-feather'
-import ImageSlider from '../../ImageSlider'
-import AddToCompareProducts from './AddToCompareProducts'
-import PropertyLabel from './PropertyLabel'
-import { useRouter } from 'next/router'
-import { toast } from 'react-toastify'
+import Link from "next/link"
+import React from "react"
+import { Camera, Heart } from "react-feather"
+import ImageSlider from "../../ImageSlider"
+import AddToCompareProducts from "./AddToCompareProducts"
+import PropertyLabel from "./PropertyLabel"
+import { useRouter } from "next/router"
+import { toast } from "react-toastify"
 
 const PropertyBox = ({ data }) => {
-  const symbol = '$'
+  const symbol = "$"
   const currencyValue = 1
   const router = useRouter()
   const NavigateFavourit = () => {
-    toast.success('Added to favourites.')
+    toast.success("Added to favourites.")
     // router.push('/myproperties/propertylist')
   }
 
@@ -44,7 +44,7 @@ const PropertyBox = ({ data }) => {
           </div>
         </div>
         <div className="property-details">
-          <span className="font-roboto">{data.country || 'USA'} </span>
+          <span className="font-roboto">{data.country || "USA"} </span>
           <Link
             href={
               Array.isArray(data.img)
@@ -62,7 +62,7 @@ const PropertyBox = ({ data }) => {
           </h6>
           <p className="font-roboto">
             {data.details ||
-              'This home provides wonderful entertaining spaces with a chef kitchen opening. Elegant retreat in a quiet Coral Gables setting..'}{' '}
+              "This home provides wonderful entertaining spaces with a chef kitchen opening. Elegant retreat in a quiet Coral Gables setting.."}{" "}
           </p>
           <ul>
             <li>

@@ -1,7 +1,7 @@
-import React from 'react'
-import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap'
-import Breadcrumb from '../../components/Common/Breadcrumb'
-import EditUserdataForm from '../../components/manageuser/edituser/EditUserdataForm'
+import React from "react"
+import { Card, CardBody, CardHeader, Col, Container, Row } from "reactstrap"
+import Breadcrumb from "../../components/Common/Breadcrumb"
+import EditUserdataForm from "../../components/manageuser/edituser/EditUserdataForm"
 
 const EditUser = () => {
   return (

@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import React from 'react'
-import { Bell } from 'react-feather'
-import { Media } from 'reactstrap'
+import Link from "next/link"
+import React from "react"
+import { Bell } from "react-feather"
+import { Media } from "reactstrap"
 
 const Notification = () => {
   return (

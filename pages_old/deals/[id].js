@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import Breadcrumb from '../../components/Common/Breadcrumb'
+import React, { useEffect, useState } from "react"
+import Breadcrumb from "../../components/Common/Breadcrumb"
 import {
   Card,
   CardBody,
@@ -8,11 +8,11 @@ import {
   Container,
   Form,
   Row,
-} from 'reactstrap'
-import EditPropertyForm from '../../components/myproperties/editProperty/EditPropertyForm'
-import { useRouter } from 'next/router'
-import DealForm from '../../components/Deal/DealForm'
-import useSWR from 'swr'
+} from "reactstrap"
+import EditPropertyForm from "../../components/myproperties/editProperty/EditPropertyForm"
+import { useRouter } from "next/router"
+import DealForm from "../../components/Deal/DealForm"
+import useSWR from "swr"
 
 const DealDetail = () => {
   const router = useRouter()

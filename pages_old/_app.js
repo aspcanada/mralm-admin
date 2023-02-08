@@ -1,9 +1,9 @@
-import Layout from '../layout'
-import '../public/assets/scss/admin.scss'
-import { ToastContainer } from 'react-toastify'
-import Head from 'next/head'
-import { UserProvider } from '@auth0/nextjs-auth0'
-import { SWRConfig } from 'swr'
+import Layout from "../layout"
+import "../public/assets/scss/admin.scss"
+import { ToastContainer } from "react-toastify"
+import Head from "next/head"
+import { UserProvider } from "@auth0/nextjs-auth0"
+import { SWRConfig } from "swr"
 
 function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>)

@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import React from 'react'
-import { ChevronRight } from 'react-feather'
-import { Card, CardBody, Col, Row } from 'reactstrap'
-import Friends from '../../manageuser/profile/Friends'
+import Link from "next/link"
+import React from "react"
+import { ChevronRight } from "react-feather"
+import { Card, CardBody, Col, Row } from "reactstrap"
+import Friends from "../../manageuser/profile/Friends"
 
 const ProjectMeeting = () => {
   return (
