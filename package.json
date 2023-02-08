@@ -16,6 +16,7 @@
     "@auth0/nextjs-auth0": "^1.9.1",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@south-paw/react-vector-maps": "^3.2.0",
+    "@supabase/supabase-js": "^2.7.1",
     "animate.css": "^4.1.1",
     "apexcharts": "^3.36.3",
     "axios": "^1.2.0",
