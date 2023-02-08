@@ -1,15 +1,15 @@
 /**=====================
      customizer css start
 ==========================**/
-.customizer-title{
-  ul{
+.customizer-title {
+  ul {
     padding: 15px;
     background-color: $light-bg;
     border-radius: 10px;
   }
-  li{
-    padding-bottom: 5px;    
-    span{
+  li {
+    padding-bottom: 5px;
+    span {
       font-size: 13px;
       word-break: break-word;
     }
@@ -138,7 +138,7 @@
         label {
           display: none;
         }
-        input[type="color"] {
+        input[type='color'] {
           width: 30px;
           height: 30px;
           padding: 0;

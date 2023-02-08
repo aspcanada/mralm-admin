@@ -1,12 +1,12 @@
-import { useRouter } from "next/router";
-import React, { useEffect } from "react";
-import Loader from "../layout/Loader";
+import { useRouter } from 'next/router'
+import React, { useEffect } from 'react'
+import Loader from '../layout/Loader'
 
 const Index = () => {
-  const router = useRouter();
+  const router = useRouter()
 
   useEffect(() => {
-    router.push('/dashboard');
+    router.push('/dashboard')
   }, [])
 
   return (
@@ -14,6 +14,6 @@ const Index = () => {
       <Loader />
     </>
   )
-};
+}
 
-export default Index;
+export default Index

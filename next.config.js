@@ -1,12 +1,12 @@
 /*
-* @type {import('next').NextConfig} 
-*/
+ * @type {import('next').NextConfig}
+ */
 
-const withPWA = require("next-pwa")({
-  dest: "public",
+const withPWA = require('next-pwa')({
+  dest: 'public',
   register: true,
   skipWaiting: true,
-});
+})
 
 module.exports = withPWA({
   reactStrictMode: false,
@@ -19,15 +19,15 @@ module.exports = withPWA({
       {
         protocol: 'https',
         hostname: 's.gravatar.com',
-        port: '',
+        // port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'lh3.googleusercontent.com',
-        port: '',
+        // port: '',
         pathname: '/**',
       },
     ],
   },
-});
+})

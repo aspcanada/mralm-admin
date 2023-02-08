@@ -1,16 +1,16 @@
-const { faker } = require('@faker-js/faker');
+const { faker } = require('@faker-js/faker')
 
 const users = []
 
 Array.from({ length: 10 }).forEach(() => {
-  users.push(createRandomUser());
-});
+  users.push(createRandomUser())
+})
 
 function createRandomUser() {
   return {
     // id: faker.datatype.number(),
     img: faker.image.avatar(),
-    properties: "1",
+    properties: '1',
     label: faker.datatype.boolean(),
     name: faker.name.fullName(),
     mobile: faker.phone.number(),
@@ -23,7 +23,7 @@ function createRandomUser() {
     // password: faker.internet.password(),
     // birthdate: faker.date.birthdate(),
     // registeredAt: faker.date.past(),
-  };
+  }
 }
 
-export { users };
+export { users }

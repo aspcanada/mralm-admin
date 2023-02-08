@@ -1,5 +1,5 @@
-import React from "react";
-import { Field, Form, Formik, ErrorMessage } from 'formik';
+import React from 'react'
+import { Field, Form, Formik, ErrorMessage } from 'formik'
 
 // Purpose: Debt consolidation
 // Location: #104 - 2600 Peatt Road, Victoria, British Columbia, V9B6X9
@@ -11,7 +11,7 @@ import { Field, Form, Formik, ErrorMessage } from 'formik';
 // Rate: 11.95% $1,294.58/m
 // Closing: Sept 01, 2021
 
-const DealForm = ({ deal={} }) => {
+const DealForm = ({ deal = {} }) => {
   return (
     <>
       <div>
@@ -30,9 +30,8 @@ const DealForm = ({ deal={} }) => {
       {/* <Formik initialValues={deal} onSubmit={onSubmit}>
           <Form>
             <Field name="purpose" /> */}
-
     </>
-  );
-};
+  )
+}
 
-export default DealForm;
+export default DealForm

@@ -1,11 +1,27 @@
-
 :root {
-    --theme-default: #ff8c41;
-    --theme-default2: #f34451;
-    --theme-gradient1: linear-gradient(to right, var(--theme-default) 0%, var(--theme-default2) 51%, var(--theme-default) 100%);
-    --theme-gradient2: linear-gradient(to right, var(--theme-default) 0%, var(--theme-default2) 100%);
-    --theme-gradient3: linear-gradient(48deg, var(--theme-default) 0%, var(--theme-default2) 100%);
-    --theme-gradient4: linear-gradient(to right, var(--theme-default) 25%, var(--theme-default2) 100%);
+  --theme-default: #ff8c41;
+  --theme-default2: #f34451;
+  --theme-gradient1: linear-gradient(
+    to right,
+    var(--theme-default) 0%,
+    var(--theme-default2) 51%,
+    var(--theme-default) 100%
+  );
+  --theme-gradient2: linear-gradient(
+    to right,
+    var(--theme-default) 0%,
+    var(--theme-default2) 100%
+  );
+  --theme-gradient3: linear-gradient(
+    48deg,
+    var(--theme-default) 0%,
+    var(--theme-default2) 100%
+  );
+  --theme-gradient4: linear-gradient(
+    to right,
+    var(--theme-default) 25%,
+    var(--theme-default2) 100%
+  );
 }
 
 // fonts
@@ -13,12 +29,12 @@ $font_0: Montserrat;
 $font_1: Roboto;
 $font_2: Rubik;
 $font_3: sans-serif;
-$font-awesome: "Font Awesome 5 free";
+$font-awesome: 'Font Awesome 5 free';
 
 //colors
 $theme-font-color: #1c2d3a;
 $theme-main-font-color: rgba(59, 66, 73, 0.7);
-$theme-sub-font-color:#3b4249;
+$theme-sub-font-color: #3b4249;
 $black: #000000;
 $white: #ffffff;
 $light-bg: #f8f8f8;
@@ -57,11 +73,10 @@ $master: #1f4771;
 $visa: #6c6f69;
 $american: #73a3b9;
 
-
 // dark layout color
 $dark-bg: darken($brown-color, 3%);
 $dark-bg2: $brown-color;
 $dark-bg3: #282727;
 $dark-border-color: #383434;
-$gray-900 : gray;
+$gray-900: gray;
 $border-color: #dee2e6;

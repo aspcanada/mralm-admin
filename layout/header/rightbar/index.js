@@ -5,13 +5,13 @@ import Notification from './Notification'
 import UserProfile from './UserProfile'
 
 const Rightbar = () => {
-    return (
-        <>
-            <Attachment />
-            <Notification />
-            <Mailbox />
-            <UserProfile />
-        </>
-    )
+  return (
+    <>
+      <Attachment />
+      <Notification />
+      <Mailbox />
+      <UserProfile />
+    </>
+  )
 }
 export default Rightbar
