@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "api": "cd api && json-server --watch db.json --routes routes.json --port 8081"
+    "api": "cd json-server && json-server --watch db.json --routes routes.json --port 8081"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.9.1",
