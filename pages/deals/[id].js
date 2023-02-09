@@ -40,7 +40,7 @@ const DealDetail = () => {
                 </CardHeader>
                 <CardBody className="card-body admin-form">
                   <pre>{JSON.stringify(deal, null, 2)}</pre>
-                  <DealForm deal={deal} />
+                  <DealForm deal={deal.data} />
                   {/* <EditPropertyForm /> */}
                 </CardBody>
               </Card>

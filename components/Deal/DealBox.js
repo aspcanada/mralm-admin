@@ -5,12 +5,14 @@ import ImageSlider from "../ImageSlider"
 import DealLabel from "./DealLabel"
 import { useRouter } from "next/router"
 import { toast } from "react-toastify"
+import Image from "next/image"
+// import AddToCompareProducts from "../Common/Propertybox/AddToCompareProducts"
 
 const DealBox = ({ deal }) => {
   const symbol = "$"
   const currencyValue = 1
   const router = useRouter()
-  const NavigateFavourit = () => {
+  const NavigateFavourite = () => {
     toast.success("Added to favourites.")
     // router.push('/myproperties/propertylist')
   }
@@ -30,21 +32,23 @@ const DealBox = ({ deal }) => {
             <span>{data.img.length}</span>
           </div>
           <Link href="" title="Member">
-            <img
+            <Image
               src={data.memberAvatar}
               alt="Member avatar"
               className="avatar"
+              height={100}
+              width={100}
             />
           </Link>
           <div className="overlay-property-box">
-            {/* <Link href='' className="effect-round" title="Compare">
-                            <AddToCompareProducts id={data.id} />
-                        </Link> */}
+            {/* <Link href="" className="effect-round" title="Compare">
+              <AddToCompareProducts id={deal.id} />
+            </Link> */}
 
             <div
               className="effect-round like"
               onClick={() => {
-                NavigateFavourit()
+                NavigateFavourite()
               }}
               title="wishlist"
             >
@@ -54,13 +58,7 @@ const DealBox = ({ deal }) => {
         </div>
         <div className="property-details">
           <span className="font-roboto">{data.city || "USA"} </span>
-          <Link
-            href={
-              Array.isArray(data.img)
-                ? `/property/image-slider/?id=${data.id}`
-                : `/property/image-box/?id=${data.id}`
-            }
-          >
+          <Link href={`/deals/${deal.id}`}>
             <h3>{data.title}</h3>
           </Link>
           <h6>
@@ -87,7 +85,7 @@ const DealBox = ({ deal }) => {
           </ul>
           <div className="property-btn d-flex">
             <span>{data.date}</span>
-            <Link href={`/deals/${data.id}`}>
+            <Link href={`/deals/${deal.id}`}>
               <button type="button" className="btn btn-dashed btn-pill">
                 Details
               </button>

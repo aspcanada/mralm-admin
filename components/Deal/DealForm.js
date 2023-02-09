@@ -1,5 +1,6 @@
 import React from "react"
 import { Field, Form, Formik, ErrorMessage } from "formik"
+import { Calendar } from "react-feather"
 
 // Purpose: Debt consolidation
 // Location: #104 - 2600 Peatt Road, Victoria, British Columbia, V9B6X9
@@ -17,12 +18,15 @@ const DealForm = ({ deal = {} }) => {
       <div>
         <h2>Mortgage Details</h2>
         <p>Purpose: {deal.purpose}</p>
-        <p>Location: {deal.location}</p>
-        <p>Value: {deal.value}</p>
+        <p>Location: {deal.city}</p>
+        <p>Value: {deal.amount}</p>
         <p>Position: {deal.position}</p>
         <p>LTV: {deal.ltv}</p>
         <p>Amount: {deal.amount}</p>
-        <p>Term: {deal.term}</p>
+        <p>
+          <Calendar size={18} />
+          Term: {deal.term} months
+        </p>
         <p>Rate: {deal.rate}</p>
         <p>Closing: {deal.date}</p>
       </div>
