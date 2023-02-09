@@ -1,16 +1,23 @@
 import { getSupabase } from "../../../utils/supabase"
 import { getPagination } from "../../../utils/pagination"
-
-const supabase = getSupabase()
+import { getSession } from "@auth0/nextjs-auth0"
 
 export default async function handler(req, res) {
-  const { _page, _limit } = req.query
-  console.log("_page", _page)
-  console.log("_limit", _limit)
+  // check if user is logged in
+  const session = getSession(req, res)
+  if (!session) {
+    res.status(401).json({ statusCode: 401, message: "Unauthorized" })
+    return
+  }
 
+  const {
+    user: { accessToken },
+  } = session
+
+  const supabase = getSupabase(accessToken)
+
+  const { _page, _limit } = req.query
   const { from, to } = getPagination(_page, _limit)
-  console.log("from", from)
-  console.log("to", to)
 
   const {
     data: deals,

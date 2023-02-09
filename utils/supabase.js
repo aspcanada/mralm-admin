@@ -1,9 +1,20 @@
 import { createClient } from "@supabase/supabase-js"
 
-const getSupabase = () => {
+const getSupabase = (access_token) => {
+  const options = {}
+
+  if (access_token) {
+    options.global = {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+    }
+  }
+
   const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.NEXT_PUBLIC_SUPABASE_KEY
+    process.env.NEXT_PUBLIC_SUPABASE_KEY,
+    options
   )
 
   return supabase
