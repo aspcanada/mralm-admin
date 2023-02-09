@@ -6,7 +6,7 @@ import DealLabel from "./DealLabel"
 import { useRouter } from "next/router"
 import { toast } from "react-toastify"
 
-const DealBox = ({ data }) => {
+const DealBox = ({ deal }) => {
   const symbol = "$"
   const currencyValue = 1
   const router = useRouter()
@@ -14,6 +14,8 @@ const DealBox = ({ data }) => {
     toast.success("Added to favourites.")
     // router.push('/myproperties/propertylist')
   }
+
+  const data = deal.data
 
   return (
     <>

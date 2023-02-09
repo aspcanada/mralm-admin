@@ -9,7 +9,7 @@ import useSWRInfinite from "swr/infinite"
 const limit = 10
 const getKey = (pageIndex, previousPageData) => {
   if (previousPageData && !previousPageData.length) return null // reached the end
-  return `/api/deals?_page=${pageIndex + 1}&_limit=${limit}` // SWR key
+  return `/api/deals?_page=${pageIndex}&_limit=${limit}` // SWR key
 }
 
 const LoadMore = ({ size, setSize, isLoadingMore, isReachingEnd }) => {

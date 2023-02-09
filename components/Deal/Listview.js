@@ -17,6 +17,7 @@ import DealBox from "./DealBox"
 // }
 
 const Listview = ({ data, size, setSize }) => {
+  console.log("Listview data", data)
   return (
     <div className="col-xl-12">
       <Row className="property-2 column-sm property-label property-grid">
@@ -24,7 +25,7 @@ const Listview = ({ data, size, setSize }) => {
           // `data` is an array of each page's API response.
           return deals.map((deal, i) => (
             <Col xl="4" md="6 xl-6" key={i}>
-              <DealBox data={deal} />
+              <DealBox deal={deal} />
             </Col>
           ))
         })}
