@@ -17,9 +17,7 @@ const Footer = () => {
             <Col md="6">
               <p className="float-end mb-0">
                 Developed with <i className="fa fa-heart font-danger" /> by{" "}
-                <a href="https://github.com/aspcanada" target="_blank">
-                  aspcanada
-                </a>
+                <a href="https://github.com/aspcanada">aspcanada</a>
               </p>
             </Col>
           </Row>
