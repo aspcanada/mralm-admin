@@ -11,12 +11,12 @@ import {
 } from "react-feather"
 
 export const SidebarMenuItem = [
-  {
-    title: "Dashboard",
-    icon: <Airplay />,
-    type: "link",
-    path: "/dashboard",
-  },
+  // {
+  //   title: "Dashboard",
+  //   icon: <Airplay />,
+  //   type: "link",
+  //   path: "/dashboard",
+  // },
   {
     title: "Deals",
     icon: <Grid />,

@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
       >
         <UserProvider>
           <Head>
-            <title>Sheltos - Admin dashboard page</title>
+            <title>My Community | Mr Arms Length Mortgage</title>
             <link
               href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i"
               rel="stylesheet"

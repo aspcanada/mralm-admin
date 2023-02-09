@@ -37,15 +37,12 @@ const index = () => {
                   or has been removed. please check or search again.
                 </p>
                 <div className="btns">
-                  <Link href="/dashboard" className="btn btn-pill btn-gradient">
+                  <Link href="/" className="btn btn-pill btn-gradient">
                     go to home page
                   </Link>
-                  <Link
-                    href="/dashboard"
-                    className="btn btn-pill btn-dashed ms-2"
-                  >
+                  {/* <Link href="/" className="btn btn-pill btn-dashed ms-2">
                     Report problem
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </Col>

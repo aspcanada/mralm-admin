@@ -18,7 +18,7 @@ const Breadcrumb = ({ title, parent, titleText }) => {
           <Col sm="6">
             <ol className="breadcrumb pull-right">
               <li className="breadcrumb-item">
-                <Link href="/dashboard">
+                <Link href="/">
                   <i className="fa fa-home" />
                 </Link>
               </li>
