@@ -1,12 +1,12 @@
 /*
-* @type {import('next').NextConfig} 
-*/
+ * @type {import('next').NextConfig}
+ */
 
 const withPWA = require("next-pwa")({
   dest: "public",
   register: true,
   skipWaiting: true,
-});
+})
 
 module.exports = withPWA({
   reactStrictMode: false,
@@ -17,17 +17,17 @@ module.exports = withPWA({
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 's.gravatar.com',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "s.gravatar.com",
+        // port: '',
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: 'lh3.googleusercontent.com',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+        // port: '',
+        pathname: "/**",
       },
     ],
   },
-});
+})

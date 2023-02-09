@@ -1,12 +1,12 @@
 /**=====================
      labels css start
 ==========================**/
-.property-overview{
+.property-overview {
   .label-success {
     background: transparent !important;
     color: $success-color !important;
-    &::after{
-      background-color: $success-color !important;      
+    &::after {
+      background-color: $success-color !important;
     }
   }
 }
@@ -29,7 +29,7 @@
   }
 
   &.label-success {
-    background: $success-color;   
+    background: $success-color;
   }
 
   &.label-danger {
@@ -50,10 +50,6 @@
       background-color: var(--theme-default);
       opacity: 0.1;
     }
-
- 
-
-   
 
     &.label-pill {
       &::after {
@@ -134,7 +130,6 @@
     opacity: 0.1;
     background-color: var(--theme-default);
   }
-
 }
 
 /**=====================

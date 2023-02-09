@@ -1,8 +1,8 @@
 /**=====================
      property css start
 ==========================**/
-.ratio3_2{
-  .single-property-slider{
+.ratio3_2 {
+  .single-property-slider {
     overflow: hidden;
   }
 }
@@ -42,10 +42,10 @@
           img {
             height: 14px;
           }
-          &:first-child{
+          &:first-child {
             padding-left: 0;
           }
-          &:last-child{
+          &:last-child {
             padding-right: 0;
           }
         }
@@ -171,7 +171,7 @@
       hr {
         width: 150px;
       }
-    }    
+    }
   }
   .title-2 {
     h2 {
@@ -247,30 +247,30 @@
       box-shadow: 3.346px 3.716px 22.5px rgba($black, 0.1);
       transition: box-shadow 0.3s ease;
       .property-image {
-        .property-slider{          
-            .slick-prev,
-            .slick-next {
-              background-color: var(--theme-default);
-              transition: all 0.5s;            
-              border-radius: 30px;
-              &::before {                
-                font-family: "Font Awesome 5 free";
-                font-weight: 900;
-                opacity: 1;
-                line-height: 0.6;
-                font-size: 12px;
-              }
-            }         
+        .property-slider {
+          .slick-prev,
+          .slick-next {
+            background-color: var(--theme-default);
+            transition: all 0.5s;
+            border-radius: 30px;
+            &::before {
+              font-family: "Font Awesome 5 free";
+              font-weight: 900;
+              opacity: 1;
+              line-height: 0.6;
+              font-size: 12px;
+            }
+          }
           .slick-prev {
             left: 15px;
             &::before {
-              content: "\f053";              
+              content: "\f053";
             }
           }
           .slick-next {
-            right: 15px;           
+            right: 15px;
             &::before {
-              content: "\f054";              
+              content: "\f054";
             }
           }
         }
@@ -279,8 +279,7 @@
     .property-image {
       position: relative;
       .property-slider {
-        margin-bottom: 0;        
-
+        margin-bottom: 0;
 
         .slick-dots {
           bottom: 20px;
@@ -308,8 +307,8 @@
         position: absolute;
         left: -6px;
         top: 20px;
-        div{
-          &+div{
+        div {
+          & + div {
             margin-top: 6px;
           }
         }
@@ -473,7 +472,7 @@
       h6 {
         font-weight: 600;
         font-size: 17px;
-        color: var(--theme-default);      
+        color: var(--theme-default);
       }
       .icon-property {
         display: flex;
@@ -584,7 +583,7 @@
       }
     }
   }
- .nav-tabs {
+  .nav-tabs {
     display: flex;
     justify-content: center;
     border-bottom: none;
@@ -1204,14 +1203,19 @@
     }
   }
 }
-.video-property{
-  .property-section .property-grid-3 .property-wrapper-grid.list-view .property-box .property-details p{
+.video-property {
+  .property-section
+    .property-grid-3
+    .property-wrapper-grid.list-view
+    .property-box
+    .property-details
+    p {
     display: block !important;
   }
 }
 .property-grid-slider {
-  .dropdown{
-    .btn{
+  .dropdown {
+    .btn {
       padding: 8px 15px;
       border: 1px solid $light-border;
       border-radius: 4px;
@@ -1376,8 +1380,9 @@
     }
 
     .share-buttons {
-      .btn-pill{
-        > i, >svg{
+      .btn-pill {
+        > i,
+        > svg {
           margin-right: 3px;
         }
       }
@@ -1468,7 +1473,7 @@
 
 .single-gallery {
   position: relative;
-  .blog-sidebar{
+  .blog-sidebar {
     padding-top: 30px;
   }
 }
@@ -1481,13 +1486,13 @@
 }
 .single-property {
   margin-top: 30px;
-  &.mt-0.pt-0{
+  &.mt-0.pt-0 {
     padding-bottom: 60px;
   }
-  .blog-sidebar{
-    .form-group{
-      .dropdown{
-        .dropdown-toggle{
+  .blog-sidebar {
+    .form-group {
+      .dropdown {
+        .dropdown-toggle {
           padding: 8px 20px 6px;
           display: block;
           color: $gray-60;
@@ -1747,11 +1752,11 @@
           font-weight: 500;
           margin-bottom: 5px;
         }
-        p.mb-0{
+        p.mb-0 {
           width: 65%;
         }
       }
-      .rating{
+      .rating {
         padding: 0 30px;
       }
     }

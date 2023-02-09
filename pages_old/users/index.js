@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "reactstrap";
-import Breadcrumb from "../../components/Common/Breadcrumb";
-import UserBox from "../../components/manageuser/allusers/UserBox";
-import useSWR from "swr";
+import React, { useEffect, useState } from "react"
+import { Col, Container, Row } from "reactstrap"
+import Breadcrumb from "../../components/Common/Breadcrumb"
+import UserBox from "../../components/manageuser/allusers/UserBox"
+import useSWR from "swr"
 
 const UsersList = () => {
   const url = "/api/users"
-  const { data: users, isLoading, error } = useSWR(url);
+  const { data: users, isLoading, error } = useSWR(url)
 
   return (
     <>
@@ -28,7 +28,7 @@ const UsersList = () => {
                       <Col md="12" xl="6" key={i}>
                         <UserBox data={item} label={false} />
                       </Col>
-                    );
+                    )
                   })}
                 </Row>
               </div>
@@ -37,7 +37,7 @@ const UsersList = () => {
         </Container>
       )}
     </>
-  );
-};
+  )
+}
 
-export default UsersList;
+export default UsersList

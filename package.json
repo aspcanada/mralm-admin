@@ -9,12 +9,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "api": "cd json-server && json-server --watch db.json --routes routes.json --port 8081"
+    "api": "cd json-server && json-server --watch db.json --routes routes.json --port 8081",
+    "lint:prettier": "prettier --write ."
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.9.1",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@south-paw/react-vector-maps": "^3.2.0",
+    "@supabase/supabase-js": "^2.7.1",
     "animate.css": "^4.1.1",
     "apexcharts": "^3.36.3",
     "axios": "^1.2.0",
@@ -23,6 +25,7 @@
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "formik": "^2.2.9",
+    "jsonwebtoken": "^9.0.0",
     "leaflet": "^1.9.3",
     "next": "13.0.5",
     "next-pwa": "^5.6.0",
@@ -40,13 +43,15 @@
     "sass": "^1.56.1",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.6.15",
-    "yup": "^0.32.11",
-    "swr": "^2.0.1"
+    "swr": "^2.0.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@types/react": "18.0.27",
-    "typescript": "4.9.4",
     "@faker-js/faker": "^7.6.0",
-    "json-server": "0.17.1"
+    "@types/react": "18.0.27",
+    "eslint-config-prettier": "^8.6.0",
+    "json-server": "0.17.1",
+    "prettier": "^2.8.4",
+    "typescript": "4.9.4"
   }
 }
