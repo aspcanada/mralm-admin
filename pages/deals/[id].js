@@ -9,7 +9,7 @@ import {
   Form,
   Row,
 } from "reactstrap"
-import EditPropertyForm from "../../components/myproperties/editProperty/EditPropertyForm"
+import EditDealForm from "../../components/Deal/EditDealForm"
 import { useRouter } from "next/router"
 import DealForm from "../../components/Deal/DealForm"
 import useSWR from "swr"
@@ -20,6 +20,7 @@ const DealDetail = () => {
 
   const url = `/api/deals/${id}`
   const { data: deal, isLoading, error } = useSWR(url)
+  console.log("deal", deal)
 
   return (
     <>
@@ -39,9 +40,8 @@ const DealDetail = () => {
                   <h5>View deal details</h5>
                 </CardHeader>
                 <CardBody className="card-body admin-form">
-                  <pre>{JSON.stringify(deal, null, 2)}</pre>
-                  <DealForm deal={deal.data} />
-                  {/* <EditPropertyForm /> */}
+                  {/* <DealForm deal={deal.data} /> */}
+                  <EditDealForm deal={deal.data} />
                 </CardBody>
               </Card>
             </Col>

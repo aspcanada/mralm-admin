@@ -19,7 +19,7 @@ const DealForm = ({ deal = {} }) => {
         <h2>Mortgage Details</h2>
         <p>Purpose: {deal.purpose}</p>
         <p>Location: {deal.city}</p>
-        <p>Value: {deal.amount}</p>
+        <p>Amount: {deal.amount}</p>
         <p>Position: {deal.position}</p>
         <p>LTV: {deal.ltv}</p>
         <p>Amount: {deal.amount}</p>
