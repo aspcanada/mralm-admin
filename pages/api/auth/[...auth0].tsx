@@ -16,12 +16,14 @@ const afterCallback = async (req, res, session, state) => {
 }
 
 
-export default handleAuth({
-  async callback(req, res) {
-    try {
-      await handleCallback(req, res, { afterCallback })
-    } catch (error) {
-      res.status(error.status || 500).end(error.message)
-    }
-  }
-})
+// export default handleAuth2({
+//   async callback(req, res) {
+//     try {
+//       await handleCallback(req, res, { afterCallback })
+//     } catch (error) {
+//       res.status(error.status || 500).end(error.message)
+//     }
+//   }
+// })
+
+export default handleAuth()
